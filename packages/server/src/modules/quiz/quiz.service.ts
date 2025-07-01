@@ -171,7 +171,7 @@ export class QuizService {
         const genericQuestions = [
             {
                 id: 1,
-                question: `What is the capital of ${country.name}?`,
+                question: `What is the capital of ${country.name}??`,
                 options: [country.capital || "Unknown", "Option B", "Option C", "Option D", "Option E"],
                 correctAnswer: country.capital || "Unknown"
             },
