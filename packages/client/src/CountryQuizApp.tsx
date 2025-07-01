@@ -110,7 +110,7 @@ const apiService = {
 };
 
 const CountryQuizApp: React.FC = () => {
-    // State Management
+    // State Management (keeping existing state but fixing the submission logic)
     const [step, setStep] = useState<'select' | 'quiz' | 'results'>('select');
     const [countries, setCountries] = useState<Country[]>([]);
     const [selectedCountry, setSelectedCountry] = useState<string>('');
@@ -155,7 +155,7 @@ const CountryQuizApp: React.FC = () => {
             setQuestions(fetchedQuestions);
             setStep('quiz');
             setCurrentQuestionIndex(0);
-            setUserAnswers([]);
+            setUserAnswers([]); // Start with empty array, will build up to match questions.length
             setSelectedAnswer(''); // Reset to empty string
             setTimeLeft(10);
             setTimerActive(true);
@@ -167,21 +167,25 @@ const CountryQuizApp: React.FC = () => {
         }
     };
 
-    const submitQuiz = useCallback(async (answers: string[]) => { // Changed parameter type
+    const submitQuiz = useCallback(async (answers: string[]) => {
         setLoading(true);
         setError('');
         try {
+            // Ensure we have exactly as many answers as questions - pad with empty strings if needed
+            const paddedAnswers = [...answers];
+            while (paddedAnswers.length < questions.length) {
+                paddedAnswers.push(''); // Empty string for unanswered questions
+            }
+
             const submission: QuizSubmission = {
                 countryCode: selectedCountry,
-                answers: answers
-                    .map((answer, index) => {
-                        const questionId = questions[index]?.id;
-                        if (questionId === undefined || answer === '') return null;
-                        return { questionId, userAnswer: answer }; // Now sending answer text
-                    })
-                    .filter((item): item is { questionId: number; userAnswer: string } => item !== null)
+                answers: questions.map((question, index) => ({
+                    questionId: question.id,
+                    userAnswer: paddedAnswers[index] || '' // Empty string for unanswered questions
+                }))
             };
 
+            console.log('Submitting quiz with answers:', submission);
             const result = await apiService.submitQuiz(submission);
             setResult(result);
             setStep('results');
@@ -206,7 +210,10 @@ const CountryQuizApp: React.FC = () => {
 
     const handleNextQuestion = useCallback(() => {
         setTimerActive(false);
-        const newAnswers = [...userAnswers, selectedAnswer];
+
+        // Use empty string for unanswered questions instead of filtering them out
+        const answerToAdd = selectedAnswer || ''; // Empty string if no answer selected
+        const newAnswers = [...userAnswers, answerToAdd];
         setUserAnswers(newAnswers);
 
         if (currentQuestionIndex < questions.length - 1) {
@@ -215,6 +222,7 @@ const CountryQuizApp: React.FC = () => {
             setTimeLeft(10);
             setTimerActive(true);
         } else {
+            // Submit all answers including empty ones
             submitQuiz(newAnswers);
         }
     }, [userAnswers, selectedAnswer, currentQuestionIndex, questions.length, submitQuiz]);
@@ -241,7 +249,7 @@ const CountryQuizApp: React.FC = () => {
         setSelectedCountry('');
         setSelectedCountryName('');
         setCurrentQuestionIndex(0);
-        setUserAnswers([]);
+        setUserAnswers([]); // Will be filled as questions are answered
         setSelectedAnswer(''); // Reset to empty string
         setResult(null);
         setError('');
@@ -814,7 +822,7 @@ const CountryQuizApp: React.FC = () => {
                             <AccordionDetails sx={{ p: 3 }}>
                                 <Stack spacing={2}>
                                     <Typography variant="h6" fontWeight={600}>
-                                        {questions[index]?.question}
+                                        {questions[index]?.question || `Question ${index + 1}`}
                                     </Typography>
                                     <Divider />
                                     <Box>
@@ -831,7 +839,7 @@ const CountryQuizApp: React.FC = () => {
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            {answer.userAnswer} {/* Now displays the actual answer text */}
+                                            {answer.userAnswer || '(No answer provided)'} {/* Show blank for empty answers */}
                                         </Typography>
                                     </Box>
                                     {!answer.isCorrect && (
@@ -849,7 +857,7 @@ const CountryQuizApp: React.FC = () => {
                                                     fontWeight: 500,
                                                 }}
                                             >
-                                                {answer.correctAnswer} {/* Now displays the actual correct answer text */}
+                                                {answer.correctAnswer}
                                             </Typography>
                                         </Box>
                                     )}

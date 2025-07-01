@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { CountriesService } from '../countries/countries.service';
 import { QuestionDto, QuizSubmissionDto, QuizResultDto } from './dto/question.dto';
+import { shuffleArray, selectRandomElements } from '../../utility/array.utils';
 import * as questionsData from './data/questions.json';
-import { selectRandomElements, shuffleArray } from '@/utility/array.utils';
 
 interface QuestionTemplate {
     id: number;
@@ -35,9 +35,7 @@ export class QuizService {
      */
     private readonly questionTemplates: Record<string, Map<number, QuestionTemplate>>;
 
-
     constructor(private readonly countriesService: CountriesService) {
-        // Transform the JSON data into Map structure for better performance
         this.questionTemplates = this.initializeQuestionTemplates();
     }
 
@@ -68,6 +66,11 @@ export class QuizService {
             throw new Error(`No questions found for country code: ${submission.countryCode}`);
         }
 
+        // Validate that we have exactly the same number of answers as questions sent
+        if (submission.answers.length !== QuizService.QUIZ_QUESTION_COUNT) {
+            throw new Error(`Expected ${QuizService.QUIZ_QUESTION_COUNT} answers, but received ${submission.answers.length}`);
+        }
+
         let correctCount = 0;
 
         const results = submission.answers.map(answer => {
@@ -78,14 +81,21 @@ export class QuizService {
             }
 
             // Compare the user's answer text with the correct answer text
-            const isCorrect = answer.userAnswer === originalQuestion.correctAnswer;
+            // Empty or null answers are considered incorrect
+            // Ensure isCorrect is strictly a boolean
+            const isCorrect = Boolean(
+                answer.userAnswer &&
+                answer.userAnswer.trim() !== '' &&
+                answer.userAnswer === originalQuestion.correctAnswer
+            );
+
             if (isCorrect) {
                 correctCount++;
             }
 
             return {
                 questionId: answer.questionId,
-                userAnswer: answer.userAnswer,
+                userAnswer: answer.userAnswer || '', // Ensure we always have a string
                 correctAnswer: originalQuestion.correctAnswer,
                 isCorrect
             };
@@ -93,8 +103,8 @@ export class QuizService {
 
         return {
             score: correctCount,
-            totalQuestions: submission.answers.length,
-            percentage: Math.round((correctCount / submission.answers.length) * 100),
+            totalQuestions: QuizService.QUIZ_QUESTION_COUNT, // Use the configured question count
+            percentage: Math.round((correctCount / QuizService.QUIZ_QUESTION_COUNT) * 100),
             answers: results
         };
     }
@@ -211,5 +221,4 @@ export class QuizService {
 
         return templates;
     }
-
 }
