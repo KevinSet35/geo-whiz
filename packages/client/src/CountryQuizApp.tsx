@@ -121,11 +121,31 @@ const CountryQuizApp: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<QuizResult | null>(null);
     const [error, setError] = useState<string>('');
+    const [timeLeft, setTimeLeft] = useState(10);
+    const [timerActive, setTimerActive] = useState(false);
 
     // Load countries on component mount
     useEffect(() => {
         loadCountries();
     }, []);
+
+    // Timer effect for quiz questions
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+
+        if (timerActive && timeLeft > 0) {
+            interval = setInterval(() => {
+                setTimeLeft((prev) => prev - 1);
+            }, 1000);
+        } else if (timeLeft === 0 && timerActive) {
+            // Time's up - auto advance
+            handleNextQuestion();
+        }
+
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [timeLeft, timerActive]);
 
     const loadCountries = async () => {
         try {
@@ -153,6 +173,8 @@ const CountryQuizApp: React.FC = () => {
             setCurrentQuestionIndex(0);
             setUserAnswers([]);
             setSelectedAnswer(-1);
+            setTimeLeft(10);
+            setTimerActive(true);
         } catch (error) {
             console.error('Failed to start quiz:', error);
             setError('Failed to load quiz questions. Please try again.');
@@ -172,12 +194,15 @@ const CountryQuizApp: React.FC = () => {
     };
 
     const handleNextQuestion = () => {
+        setTimerActive(false);
         const newAnswers = [...userAnswers, selectedAnswer];
         setUserAnswers(newAnswers);
 
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
             setSelectedAnswer(-1);
+            setTimeLeft(10);
+            setTimerActive(true);
         } else {
             submitQuiz(newAnswers);
         }
@@ -218,6 +243,8 @@ const CountryQuizApp: React.FC = () => {
         setSelectedAnswer(-1);
         setResult(null);
         setError('');
+        setTimeLeft(10);
+        setTimerActive(false);
     };
 
     const getScoreColor = (percentage: number) => {
@@ -421,17 +448,31 @@ const CountryQuizApp: React.FC = () => {
                                     <Typography variant="h4" color="primary">
                                         Question {currentQuestionIndex + 1} of {questions.length}
                                     </Typography>
-                                    <Chip
-                                        label={`${Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%`}
-                                        color="primary"
-                                        variant="filled"
-                                        sx={{
-                                            fontSize: '1rem',
-                                            fontWeight: 600,
-                                            px: 2,
-                                            py: 1,
-                                        }}
-                                    />
+                                    <Box display="flex" alignItems="center" gap={2}>
+                                        <Chip
+                                            label={`${Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%`}
+                                            color="primary"
+                                            variant="filled"
+                                            sx={{
+                                                fontSize: '1rem',
+                                                fontWeight: 600,
+                                                px: 2,
+                                                py: 1,
+                                            }}
+                                        />
+                                        <Chip
+                                            label={`⏱️ ${timeLeft}s`}
+                                            color={timeLeft <= 3 ? 'error' : timeLeft <= 5 ? 'warning' : 'success'}
+                                            variant="filled"
+                                            sx={{
+                                                fontSize: '1rem',
+                                                fontWeight: 600,
+                                                px: 2,
+                                                py: 1,
+                                                animation: timeLeft <= 3 ? `${pulse} 0.5s ease-in-out infinite` : 'none',
+                                            }}
+                                        />
+                                    </Box>
                                 </Box>
                                 <LinearProgress
                                     variant="determinate"
@@ -440,9 +481,27 @@ const CountryQuizApp: React.FC = () => {
                                         height: 12,
                                         borderRadius: 6,
                                         backgroundColor: 'rgba(103, 126, 234, 0.1)',
+                                        mb: 1,
                                         '& .MuiLinearProgress-bar': {
                                             background: 'linear-gradient(45deg, #667eea, #764ba2)',
                                             borderRadius: 6,
+                                        },
+                                    }}
+                                />
+                                <LinearProgress
+                                    variant="determinate"
+                                    value={(timeLeft / 10) * 100}
+                                    sx={{
+                                        height: 8,
+                                        borderRadius: 4,
+                                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                                        '& .MuiLinearProgress-bar': {
+                                            background: timeLeft <= 3
+                                                ? 'linear-gradient(45deg, #ef4444, #dc2626)'
+                                                : timeLeft <= 5
+                                                    ? 'linear-gradient(45deg, #f59e0b, #d97706)'
+                                                    : 'linear-gradient(45deg, #10b981, #059669)',
+                                            borderRadius: 4,
                                         },
                                     }}
                                 />
