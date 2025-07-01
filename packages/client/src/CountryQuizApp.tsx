@@ -408,7 +408,14 @@ const CountryQuizApp: React.FC = () => {
                             >
                                 🌍
                             </Box>
-                            <Typography variant="h1" sx={{ mb: 2 }}>
+                            <Typography variant="h1" sx={{
+                                mb: 2,
+                                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                                color: 'white',
+                                background: 'none',
+                                WebkitBackgroundClip: 'unset',
+                                WebkitTextFillColor: 'white',
+                            }}>
                                 World Geography Quiz
                             </Typography>
                             <Typography variant="h6" sx={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic' }}>
@@ -944,11 +951,13 @@ const CountryQuizApp: React.FC = () => {
                         position: 'fixed',
                         top: '10%',
                         left: '5%',
-                        fontSize: '2rem',
-                        opacity: 0.1,
+                        fontSize: '3rem',
+                        opacity: 0.3,
                         animation: `${float} 8s ease-in-out infinite`,
                         animationDelay: '0s',
                         pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
                     }}
                 >
                     🗺️
@@ -958,11 +967,13 @@ const CountryQuizApp: React.FC = () => {
                         position: 'fixed',
                         top: '20%',
                         right: '8%',
-                        fontSize: '1.5rem',
-                        opacity: 0.1,
+                        fontSize: '2.5rem',
+                        opacity: 0.3,
                         animation: `${float} 10s ease-in-out infinite`,
                         animationDelay: '2s',
                         pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
                     }}
                 >
                     🧭
@@ -972,11 +983,13 @@ const CountryQuizApp: React.FC = () => {
                         position: 'fixed',
                         bottom: '15%',
                         left: '10%',
-                        fontSize: '1.8rem',
-                        opacity: 0.1,
+                        fontSize: '2.8rem',
+                        opacity: 0.3,
                         animation: `${float} 12s ease-in-out infinite`,
                         animationDelay: '4s',
                         pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
                     }}
                 >
                     🏔️
@@ -986,14 +999,48 @@ const CountryQuizApp: React.FC = () => {
                         position: 'fixed',
                         bottom: '25%',
                         right: '5%',
-                        fontSize: '1.6rem',
-                        opacity: 0.1,
+                        fontSize: '2.6rem',
+                        opacity: 0.3,
                         animation: `${float} 9s ease-in-out infinite`,
                         animationDelay: '1s',
                         pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
                     }}
                 >
                     🏛️
+                </Box>
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        top: '60%',
+                        left: '3%',
+                        fontSize: '2.2rem',
+                        opacity: 0.25,
+                        animation: `${float} 11s ease-in-out infinite`,
+                        animationDelay: '3s',
+                        pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
+                    }}
+                >
+                    🌎
+                </Box>
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        top: '40%',
+                        right: '12%',
+                        fontSize: '2.4rem',
+                        opacity: 0.25,
+                        animation: `${float} 13s ease-in-out infinite`,
+                        animationDelay: '5s',
+                        pointerEvents: 'none',
+                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
+                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
+                    }}
+                >
+                    🌍
                 </Box>
             </Box>
         </ThemeProvider>
