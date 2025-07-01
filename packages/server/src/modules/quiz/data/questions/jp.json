@@ -1,0 +1,482 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Japan?",
+        "options": [
+            "Osaka",
+            "Kyoto",
+            "Tokyo",
+            "Hiroshima",
+            "Nagoya"
+        ],
+        "correctAnswer": "Tokyo"
+    },
+    {
+        "id": 2,
+        "question": "What is Japan's highest mountain?",
+        "options": [
+            "Mount Fuji",
+            "Mount Kita",
+            "Mount Hotaka",
+            "Mount Yari",
+            "Mount Tate"
+        ],
+        "correctAnswer": "Mount Fuji"
+    },
+    {
+        "id": 3,
+        "question": "Which currency is used in Japan?",
+        "options": [
+            "Won",
+            "Yuan",
+            "Yen",
+            "Dollar",
+            "Ringgit"
+        ],
+        "correctAnswer": "Yen"
+    },
+    {
+        "id": 4,
+        "question": "What is the traditional Japanese garment called?",
+        "options": [
+            "Hanbok",
+            "Cheongsam",
+            "Sari",
+            "Kimono",
+            "Ao dai"
+        ],
+        "correctAnswer": "Kimono"
+    },
+    {
+        "id": 5,
+        "question": "Japan consists of how many main islands?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correctAnswer": "4"
+    },
+    {
+        "id": 6,
+        "question": "What is the Japanese art of flower arrangement?",
+        "options": [
+            "Origami",
+            "Ikebana",
+            "Bonsai",
+            "Kabuki",
+            "Haiku"
+        ],
+        "correctAnswer": "Ikebana"
+    },
+    {
+        "id": 7,
+        "question": "Which sea separates Japan from Korea?",
+        "options": [
+            "East China Sea",
+            "Sea of Japan",
+            "Yellow Sea",
+            "Philippine Sea",
+            "South China Sea"
+        ],
+        "correctAnswer": "Sea of Japan"
+    },
+    {
+        "id": 8,
+        "question": "What is the traditional Japanese tea ceremony called?",
+        "options": [
+            "Chanoyu",
+            "Sashimi",
+            "Tempura",
+            "Sukiyaki",
+            "Yakitori"
+        ],
+        "correctAnswer": "Chanoyu"
+    },
+    {
+        "id": 9,
+        "question": "Which city was the former capital of Japan?",
+        "options": [
+            "Tokyo",
+            "Osaka",
+            "Kyoto",
+            "Nara",
+            "Kamakura"
+        ],
+        "correctAnswer": "Kyoto"
+    },
+    {
+        "id": 10,
+        "question": "What is the Japanese martial art of sword fighting?",
+        "options": [
+            "Karate",
+            "Judo",
+            "Kendo",
+            "Aikido",
+            "Sumo"
+        ],
+        "correctAnswer": "Kendo"
+    },
+    {
+        "id": 11,
+        "question": "What is the largest island in Japan?",
+        "options": [
+            "Honshu",
+            "Hokkaido",
+            "Kyushu",
+            "Shikoku",
+            "Okinawa"
+        ],
+        "correctAnswer": "Honshu"
+    },
+    {
+        "id": 12,
+        "question": "What is the Japanese bullet train called?",
+        "options": [
+            "Shinkansen",
+            "Maglev",
+            "Express",
+            "Rapid",
+            "Metro"
+        ],
+        "correctAnswer": "Shinkansen"
+    },
+    {
+        "id": 13,
+        "question": "Which Japanese city is famous for its atomic bomb memorial?",
+        "options": [
+            "Tokyo",
+            "Osaka",
+            "Hiroshima",
+            "Nagoya",
+            "Kobe"
+        ],
+        "correctAnswer": "Hiroshima"
+    },
+    {
+        "id": 14,
+        "question": "What is the Japanese writing system that uses Chinese characters?",
+        "options": [
+            "Hiragana",
+            "Katakana",
+            "Kanji",
+            "Romaji",
+            "Furigana"
+        ],
+        "correctAnswer": "Kanji"
+    },
+    {
+        "id": 15,
+        "question": "Which Japanese food is raw fish?",
+        "options": [
+            "Tempura",
+            "Sushi",
+            "Ramen",
+            "Udon",
+            "Miso"
+        ],
+        "correctAnswer": "Sushi"
+    },
+    {
+        "id": 16,
+        "question": "What is the Japanese festival of cherry blossoms called?",
+        "options": [
+            "Hanami",
+            "Tanabata",
+            "Obon",
+            "Setsubun",
+            "Shichi-Go-San"
+        ],
+        "correctAnswer": "Hanami"
+    },
+    {
+        "id": 17,
+        "question": "Which Japanese company is famous for video games?",
+        "options": [
+            "Sony",
+            "Nintendo",
+            "Panasonic",
+            "Toshiba",
+            "Hitachi"
+        ],
+        "correctAnswer": "Nintendo"
+    },
+    {
+        "id": 18,
+        "question": "What is the traditional Japanese wrestling called?",
+        "options": [
+            "Karate",
+            "Judo",
+            "Sumo",
+            "Aikido",
+            "Kendo"
+        ],
+        "correctAnswer": "Sumo"
+    },
+    {
+        "id": 19,
+        "question": "Which Japanese city hosted the 1964 Olympics?",
+        "options": [
+            "Tokyo",
+            "Osaka",
+            "Kyoto",
+            "Hiroshima",
+            "Sapporo"
+        ],
+        "correctAnswer": "Tokyo"
+    },
+    {
+        "id": 20,
+        "question": "What is the Japanese art of paper folding?",
+        "options": [
+            "Ikebana",
+            "Origami",
+            "Bonsai",
+            "Calligraphy",
+            "Pottery"
+        ],
+        "correctAnswer": "Origami"
+    },
+    {
+        "id": 21,
+        "question": "What is the traditional Japanese robe worn at home?",
+        "options": [
+            "Kimono",
+            "Yukata",
+            "Hakama",
+            "Obi",
+            "Geta"
+        ],
+        "correctAnswer": "Yukata"
+    },
+    {
+        "id": 22,
+        "question": "Which Japanese city is famous for its bamboo forest?",
+        "options": [
+            "Tokyo",
+            "Kyoto",
+            "Osaka",
+            "Nara",
+            "Hiroshima"
+        ],
+        "correctAnswer": "Kyoto"
+    },
+    {
+        "id": 23,
+        "question": "What is the Japanese word for 'thank you'?",
+        "options": [
+            "Konnichiwa",
+            "Sayonara",
+            "Arigato",
+            "Ohayo",
+            "Sumimasen"
+        ],
+        "correctAnswer": "Arigato"
+    },
+    {
+        "id": 24,
+        "question": "Which Japanese food consists of rice balls?",
+        "options": [
+            "Sashimi",
+            "Tempura",
+            "Onigiri",
+            "Yakitori",
+            "Tonkatsu"
+        ],
+        "correctAnswer": "Onigiri"
+    },
+    {
+        "id": 25,
+        "question": "What is the Japanese word for 'hello'?",
+        "options": [
+            "Arigato",
+            "Konnichiwa",
+            "Sayonara",
+            "Ohayo",
+            "Konbanwa"
+        ],
+        "correctAnswer": "Konnichiwa"
+    },
+    {
+        "id": 26,
+        "question": "Which Japanese festival celebrates the dead?",
+        "options": [
+            "Hanami",
+            "Tanabata",
+            "Obon",
+            "Golden Week",
+            "Setsubun"
+        ],
+        "correctAnswer": "Obon"
+    },
+    {
+        "id": 27,
+        "question": "What is the traditional Japanese theater with masks called?",
+        "options": [
+            "Kabuki",
+            "Noh",
+            "Bunraku",
+            "Rakugo",
+            "Kyogen"
+        ],
+        "correctAnswer": "Noh"
+    },
+    {
+        "id": 28,
+        "question": "Which Japanese electronics company makes the PlayStation?",
+        "options": [
+            "Nintendo",
+            "Sony",
+            "Panasonic",
+            "Toshiba",
+            "Sharp"
+        ],
+        "correctAnswer": "Sony"
+    },
+    {
+        "id": 29,
+        "question": "What is the Japanese art of miniature trees called?",
+        "options": [
+            "Ikebana",
+            "Origami",
+            "Bonsai",
+            "Sumi-e",
+            "Ukiyo-e"
+        ],
+        "correctAnswer": "Bonsai"
+    },
+    {
+        "id": 30,
+        "question": "Which Japanese city hosted the 1972 Winter Olympics?",
+        "options": [
+            "Tokyo",
+            "Osaka",
+            "Sapporo",
+            "Nagoya",
+            "Kyoto"
+        ],
+        "correctAnswer": "Sapporo"
+    },
+    {
+        "id": 31,
+        "question": "What is the Japanese word for 'goodbye'?",
+        "options": [
+            "Konnichiwa",
+            "Arigato",
+            "Sayonara",
+            "Ohayo",
+            "Sumimasen"
+        ],
+        "correctAnswer": "Sayonara"
+    },
+    {
+        "id": 32,
+        "question": "Which Japanese noodle is thick and chewy?",
+        "options": [
+            "Ramen",
+            "Soba",
+            "Udon",
+            "Somen",
+            "Yakisoba"
+        ],
+        "correctAnswer": "Udon"
+    },
+    {
+        "id": 33,
+        "question": "What is the traditional Japanese inn called?",
+        "options": [
+            "Ryokan",
+            "Minshuku",
+            "Capsule hotel",
+            "Business hotel",
+            "Love hotel"
+        ],
+        "correctAnswer": "Ryokan"
+    },
+    {
+        "id": 34,
+        "question": "Which Japanese island is known for its snow monkeys?",
+        "options": [
+            "Honshu",
+            "Hokkaido",
+            "Kyushu",
+            "Shikoku",
+            "Okinawa"
+        ],
+        "correctAnswer": "Honshu"
+    },
+    {
+        "id": 35,
+        "question": "What is the Japanese rice wine called?",
+        "options": [
+            "Sake",
+            "Shochu",
+            "Whisky",
+            "Beer",
+            "Wine"
+        ],
+        "correctAnswer": "Sake"
+    },
+    {
+        "id": 36,
+        "question": "Which Japanese car manufacturer makes the Prius?",
+        "options": [
+            "Honda",
+            "Toyota",
+            "Nissan",
+            "Mazda",
+            "Subaru"
+        ],
+        "correctAnswer": "Toyota"
+    },
+    {
+        "id": 37,
+        "question": "What is the Japanese writing system with syllables called?",
+        "options": [
+            "Kanji",
+            "Hiragana",
+            "Katakana",
+            "Romaji",
+            "Furigana"
+        ],
+        "correctAnswer": "Hiragana"
+    },
+    {
+        "id": 38,
+        "question": "Which Japanese city is famous for its deer park?",
+        "options": [
+            "Tokyo",
+            "Kyoto",
+            "Osaka",
+            "Nara",
+            "Hiroshima"
+        ],
+        "correctAnswer": "Nara"
+    },
+    {
+        "id": 39,
+        "question": "What is the Japanese soup made with fermented soybean paste?",
+        "options": [
+            "Ramen",
+            "Udon",
+            "Miso",
+            "Dashi",
+            "Tonkotsu"
+        ],
+        "correctAnswer": "Miso"
+    },
+    {
+        "id": 40,
+        "question": "Which Japanese animation studio created 'My Neighbor Totoro'?",
+        "options": [
+            "Studio Ghibli",
+            "Toei Animation",
+            "Madhouse",
+            "Bones",
+            "Pierrot"
+        ],
+        "correctAnswer": "Studio Ghibli"
+    }
+]

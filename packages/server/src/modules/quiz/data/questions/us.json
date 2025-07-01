@@ -1,0 +1,482 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of the United States?",
+        "options": [
+            "New York",
+            "Los Angeles",
+            "Washington, D.C.",
+            "Chicago",
+            "Houston"
+        ],
+        "correctAnswer": "Washington, D.C."
+    },
+    {
+        "id": 2,
+        "question": "Which river is the longest in the United States?",
+        "options": [
+            "Colorado River",
+            "Mississippi River",
+            "Columbia River",
+            "Rio Grande",
+            "Ohio River"
+        ],
+        "correctAnswer": "Mississippi River"
+    },
+    {
+        "id": 3,
+        "question": "How many states are there in the United States?",
+        "options": [
+            "48",
+            "49",
+            "50",
+            "51",
+            "52"
+        ],
+        "correctAnswer": "50"
+    },
+    {
+        "id": 4,
+        "question": "What is the currency of the United States?",
+        "options": [
+            "Euro",
+            "Pound",
+            "Dollar",
+            "Yen",
+            "Peso"
+        ],
+        "correctAnswer": "Dollar"
+    },
+    {
+        "id": 5,
+        "question": "Which mountain range runs along the western United States?",
+        "options": [
+            "Appalachian Mountains",
+            "Rocky Mountains",
+            "Sierra Nevada",
+            "Cascade Range",
+            "Great Smoky Mountains"
+        ],
+        "correctAnswer": "Rocky Mountains"
+    },
+    {
+        "id": 6,
+        "question": "What is the national bird of the United States?",
+        "options": [
+            "Robin",
+            "Cardinal",
+            "Bald Eagle",
+            "Blue Jay",
+            "Hawk"
+        ],
+        "correctAnswer": "Bald Eagle"
+    },
+    {
+        "id": 7,
+        "question": "Which state is known as the 'Golden State'?",
+        "options": [
+            "Texas",
+            "Florida",
+            "California",
+            "Nevada",
+            "Arizona"
+        ],
+        "correctAnswer": "California"
+    },
+    {
+        "id": 8,
+        "question": "What is the largest state by area in the United States?",
+        "options": [
+            "Texas",
+            "California",
+            "Alaska",
+            "Montana",
+            "New Mexico"
+        ],
+        "correctAnswer": "Alaska"
+    },
+    {
+        "id": 9,
+        "question": "Which Great Lake is entirely within the United States?",
+        "options": [
+            "Lake Superior",
+            "Lake Michigan",
+            "Lake Huron",
+            "Lake Erie",
+            "Lake Ontario"
+        ],
+        "correctAnswer": "Lake Michigan"
+    },
+    {
+        "id": 10,
+        "question": "What is the national motto of the United States?",
+        "options": [
+            "E Pluribus Unum",
+            "In God We Trust",
+            "Land of the Free",
+            "United We Stand",
+            "Liberty and Justice"
+        ],
+        "correctAnswer": "In God We Trust"
+    },
+    {
+        "id": 11,
+        "question": "Which president is on Mount Rushmore along with Washington, Jefferson, and Lincoln?",
+        "options": [
+            "Franklin Roosevelt",
+            "Theodore Roosevelt",
+            "John Adams",
+            "Thomas Jefferson",
+            "Andrew Jackson"
+        ],
+        "correctAnswer": "Theodore Roosevelt"
+    },
+    {
+        "id": 12,
+        "question": "What is the smallest state by area?",
+        "options": [
+            "Delaware",
+            "Connecticut",
+            "Rhode Island",
+            "Vermont",
+            "New Hampshire"
+        ],
+        "correctAnswer": "Rhode Island"
+    },
+    {
+        "id": 13,
+        "question": "Which city is known as the 'Big Apple'?",
+        "options": [
+            "Los Angeles",
+            "Chicago",
+            "New York City",
+            "San Francisco",
+            "Boston"
+        ],
+        "correctAnswer": "New York City"
+    },
+    {
+        "id": 14,
+        "question": "What is the national anthem of the United States?",
+        "options": [
+            "God Bless America",
+            "America the Beautiful",
+            "The Star-Spangled Banner",
+            "My Country 'Tis of Thee",
+            "Battle Hymn of the Republic"
+        ],
+        "correctAnswer": "The Star-Spangled Banner"
+    },
+    {
+        "id": 15,
+        "question": "Which state is famous for its lobster?",
+        "options": [
+            "Florida",
+            "California",
+            "Maine",
+            "Alaska",
+            "Louisiana"
+        ],
+        "correctAnswer": "Maine"
+    },
+    {
+        "id": 16,
+        "question": "What is the Grand Canyon located in?",
+        "options": [
+            "Utah",
+            "Colorado",
+            "Arizona",
+            "Nevada",
+            "New Mexico"
+        ],
+        "correctAnswer": "Arizona"
+    },
+    {
+        "id": 17,
+        "question": "Which ocean borders the United States on the west?",
+        "options": [
+            "Atlantic Ocean",
+            "Pacific Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
+        ],
+        "correctAnswer": "Pacific Ocean"
+    },
+    {
+        "id": 18,
+        "question": "What is the tallest mountain in the United States?",
+        "options": [
+            "Mount Whitney",
+            "Mount Elbert",
+            "Denali",
+            "Mount Rainier",
+            "Mount Washington"
+        ],
+        "correctAnswer": "Denali"
+    },
+    {
+        "id": 19,
+        "question": "Which state is known for its peaches?",
+        "options": [
+            "Florida",
+            "Georgia",
+            "California",
+            "Texas",
+            "Arizona"
+        ],
+        "correctAnswer": "Georgia"
+    },
+    {
+        "id": 20,
+        "question": "What is the most populous city in the United States?",
+        "options": [
+            "Los Angeles",
+            "Chicago",
+            "New York City",
+            "Houston",
+            "Phoenix"
+        ],
+        "correctAnswer": "New York City"
+    },
+    {
+        "id": 21,
+        "question": "Which U.S. state is known as the 'Sunshine State'?",
+        "options": [
+            "California",
+            "Arizona",
+            "Florida",
+            "Nevada",
+            "Hawaii"
+        ],
+        "correctAnswer": "Florida"
+    },
+    {
+        "id": 22,
+        "question": "What is the largest city in Texas?",
+        "options": [
+            "Dallas",
+            "Austin",
+            "Houston",
+            "San Antonio",
+            "Fort Worth"
+        ],
+        "correctAnswer": "Houston"
+    },
+    {
+        "id": 23,
+        "question": "Which river forms part of the border between the United States and Mexico?",
+        "options": [
+            "Colorado River",
+            "Rio Grande",
+            "Mississippi River",
+            "Columbia River",
+            "Snake River"
+        ],
+        "correctAnswer": "Rio Grande"
+    },
+    {
+        "id": 24,
+        "question": "What is the nickname for New York City?",
+        "options": [
+            "The Windy City",
+            "The Big Easy",
+            "The City of Angels",
+            "The Big Apple",
+            "The Motor City"
+        ],
+        "correctAnswer": "The Big Apple"
+    },
+    {
+        "id": 25,
+        "question": "Which state is home to Yellowstone National Park?",
+        "options": [
+            "Montana",
+            "Idaho",
+            "Wyoming",
+            "Colorado",
+            "Utah"
+        ],
+        "correctAnswer": "Wyoming"
+    },
+    {
+        "id": 26,
+        "question": "What is the most spoken language in the United States after English?",
+        "options": [
+            "French",
+            "Spanish",
+            "Chinese",
+            "German",
+            "Italian"
+        ],
+        "correctAnswer": "Spanish"
+    },
+    {
+        "id": 27,
+        "question": "Which U.S. state has the most national parks?",
+        "options": [
+            "California",
+            "Alaska",
+            "Utah",
+            "Colorado",
+            "Arizona"
+        ],
+        "correctAnswer": "California"
+    },
+    {
+        "id": 28,
+        "question": "What is the deepest lake in the United States?",
+        "options": [
+            "Lake Tahoe",
+            "Crater Lake",
+            "Lake Superior",
+            "Lake Michigan",
+            "Great Salt Lake"
+        ],
+        "correctAnswer": "Crater Lake"
+    },
+    {
+        "id": 29,
+        "question": "Which city is known as the 'Music City'?",
+        "options": [
+            "New Orleans",
+            "Austin",
+            "Nashville",
+            "Memphis",
+            "Detroit"
+        ],
+        "correctAnswer": "Nashville"
+    },
+    {
+        "id": 30,
+        "question": "What is the longest highway in the United States?",
+        "options": [
+            "Interstate 95",
+            "Interstate 10",
+            "Interstate 80",
+            "Interstate 90",
+            "Route 66"
+        ],
+        "correctAnswer": "Interstate 90"
+    },
+    {
+        "id": 31,
+        "question": "Which U.S. state is known for producing the most maple syrup?",
+        "options": [
+            "Maine",
+            "New Hampshire",
+            "Vermont",
+            "New York",
+            "Wisconsin"
+        ],
+        "correctAnswer": "Vermont"
+    },
+    {
+        "id": 32,
+        "question": "What is the largest desert in the United States?",
+        "options": [
+            "Mojave Desert",
+            "Sonoran Desert",
+            "Great Basin Desert",
+            "Chihuahuan Desert",
+            "Colorado Plateau"
+        ],
+        "correctAnswer": "Great Basin Desert"
+    },
+    {
+        "id": 33,
+        "question": "Which state is known as the 'Last Frontier'?",
+        "options": [
+            "Montana",
+            "Wyoming",
+            "Alaska",
+            "North Dakota",
+            "Idaho"
+        ],
+        "correctAnswer": "Alaska"
+    },
+    {
+        "id": 34,
+        "question": "What is the most visited national park in the United States?",
+        "options": [
+            "Yellowstone",
+            "Yosemite",
+            "Grand Canyon",
+            "Great Smoky Mountains",
+            "Zion"
+        ],
+        "correctAnswer": "Great Smoky Mountains"
+    },
+    {
+        "id": 35,
+        "question": "Which U.S. state is home to the Space Needle?",
+        "options": [
+            "California",
+            "Washington",
+            "Oregon",
+            "Nevada",
+            "Colorado"
+        ],
+        "correctAnswer": "Washington"
+    },
+    {
+        "id": 36,
+        "question": "What is the official flower of the United States?",
+        "options": [
+            "Sunflower",
+            "Rose",
+            "Daisy",
+            "Tulip",
+            "Lily"
+        ],
+        "correctAnswer": "Rose"
+    },
+    {
+        "id": 37,
+        "question": "Which state is famous for its cranberry production?",
+        "options": [
+            "Maine",
+            "Massachusetts",
+            "Wisconsin",
+            "Oregon",
+            "New Jersey"
+        ],
+        "correctAnswer": "Wisconsin"
+    },
+    {
+        "id": 38,
+        "question": "What is the largest freshwater lake entirely within the United States?",
+        "options": [
+            "Lake Superior",
+            "Lake Michigan",
+            "Lake Huron",
+            "Lake Erie",
+            "Lake Ontario"
+        ],
+        "correctAnswer": "Lake Michigan"
+    },
+    {
+        "id": 39,
+        "question": "Which city is home to the Liberty Bell?",
+        "options": [
+            "Boston",
+            "New York City",
+            "Philadelphia",
+            "Washington D.C.",
+            "Baltimore"
+        ],
+        "correctAnswer": "Philadelphia"
+    },
+    {
+        "id": 40,
+        "question": "What is the hottest temperature ever recorded in the United States?",
+        "options": [
+            "128°F",
+            "134°F",
+            "130°F",
+            "132°F",
+            "136°F"
+        ],
+        "correctAnswer": "134°F"
+    }
+]

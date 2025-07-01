@@ -2,7 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { CountriesService } from '../countries/countries.service';
 import { QuestionDto, QuizSubmissionDto, QuizResultDto } from './dto/question.dto';
 import { shuffleArray, selectRandomElements } from '../../utility/array.utils';
-import * as questionsData from './data/questions.json';
+import * as usQuestions from './data/questions/us.json';
+import * as frQuestions from './data/questions/fr.json';
+import * as jpQuestions from './data/questions/jp.json';
 
 interface QuestionTemplate {
     id: number;
@@ -10,6 +12,12 @@ interface QuestionTemplate {
     options: string[];
     correctAnswer: string;
 }
+
+const COUNTRY_QUESTION_DATA = {
+    'US': usQuestions,
+    'FR': frQuestions,
+    'JP': jpQuestions
+} as const;
 
 @Injectable()
 export class QuizService {
@@ -211,11 +219,18 @@ export class QuizService {
     private initializeQuestionTemplates(): Record<string, Map<number, QuestionTemplate>> {
         const templates: Record<string, Map<number, QuestionTemplate>> = {};
 
-        Object.entries(questionsData).forEach(([countryCode, questions]) => {
+        // Process each country's questions using the global country data mapping
+        Object.entries(COUNTRY_QUESTION_DATA).forEach(([countryCode, questionsData]) => {
             const questionMap = new Map<number, QuestionTemplate>();
-            questions.forEach((question: QuestionTemplate) => {
+            const questions = questionsData as QuestionTemplate[] | { default: QuestionTemplate[] };
+
+            // Handle both direct array export and default export
+            const questionArray = Array.isArray(questions) ? questions : questions.default || [];
+
+            questionArray.forEach((question: QuestionTemplate) => {
                 questionMap.set(question.id, question);
             });
+
             templates[countryCode] = questionMap;
         });
 
