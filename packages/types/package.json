@@ -1,22 +1,26 @@
 {
-  "name": "@geo-whiz/types",
-  "version": "1.0.0",
-  "description": "Shared TypeScript types for geo-whiz",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "clean": "rimraf dist"
-  },
-  "keywords": ["types", "typescript", "shared"],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "typescript": "^5.3.2",
-    "rimraf": "^5.0.5"
-  },
-  "dependencies": {
-    "zod": "^3.22.4"
-  }
+    "name": "@geo-whiz/types",
+    "version": "1.0.0",
+    "description": "Shared TypeScript types for geo-whiz",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc && echo \"\n========== 🔨 Building @geo-whiz/types... ==========\n\"",
+        "dev": "tsc --watch",
+        "clean": "rimraf dist"
+    },
+    "keywords": [
+        "types",
+        "typescript",
+        "shared"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.3.2",
+        "rimraf": "^5.0.5"
+    },
+    "dependencies": {
+        "zod": "^3.22.4"
+    }
 }

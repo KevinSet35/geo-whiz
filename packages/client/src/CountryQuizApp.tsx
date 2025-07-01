@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import {
     Box,
@@ -55,7 +55,7 @@ const api = axios.create({
     },
 });
 
-// Types
+// Updated Types to match backend DTOs
 interface Country {
     code: string;
     name: string;
@@ -66,13 +66,13 @@ interface Question {
     id: number;
     question: string;
     options: string[];
-    correctAnswer: number;
+    correctAnswer: string; // Changed from number to string
 }
 
 interface QuizAnswer {
     questionId: number;
-    userAnswer: number;
-    correctAnswer: number;
+    userAnswer: string; // Changed from number to string
+    correctAnswer: string; // Changed from number to string
     isCorrect: boolean;
 }
 
@@ -87,7 +87,7 @@ interface QuizSubmission {
     countryCode: string;
     answers: {
         questionId: number;
-        userAnswer: number;
+        userAnswer: string; // Changed from number to string
     }[];
 }
 
@@ -117,8 +117,8 @@ const CountryQuizApp: React.FC = () => {
     const [selectedCountryName, setSelectedCountryName] = useState<string>('');
     const [questions, setQuestions] = useState<Question[]>([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [userAnswers, setUserAnswers] = useState<number[]>([]);
-    const [selectedAnswer, setSelectedAnswer] = useState<number>(-1);
+    const [userAnswers, setUserAnswers] = useState<string[]>([]); // Changed from number[] to string[]
+    const [selectedAnswer, setSelectedAnswer] = useState<string>(''); // Changed from number to string
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<QuizResult | null>(null);
     const [error, setError] = useState<string>('');
@@ -129,22 +129,6 @@ const CountryQuizApp: React.FC = () => {
     useEffect(() => {
         loadCountries();
     }, []);
-
-    useEffect(() => {
-        let interval: NodeJS.Timeout;
-
-        if (timerActive && timeLeft > 0) {
-            interval = setInterval(() => {
-                setTimeLeft((prev) => prev - 1);
-            }, 1000);
-        } else if (timeLeft === 0 && timerActive) {
-            handleNextQuestion();
-        }
-
-        return () => {
-            if (interval) clearInterval(interval);
-        };
-    }, [timeLeft, timerActive]);
 
     // API Functions
     const loadCountries = async () => {
@@ -172,7 +156,7 @@ const CountryQuizApp: React.FC = () => {
             setStep('quiz');
             setCurrentQuestionIndex(0);
             setUserAnswers([]);
-            setSelectedAnswer(-1);
+            setSelectedAnswer(''); // Reset to empty string
             setTimeLeft(10);
             setTimerActive(true);
         } catch (error) {
@@ -183,7 +167,7 @@ const CountryQuizApp: React.FC = () => {
         }
     };
 
-    const submitQuiz = async (answers: number[]) => {
+    const submitQuiz = useCallback(async (answers: string[]) => { // Changed parameter type
         setLoading(true);
         setError('');
         try {
@@ -192,10 +176,10 @@ const CountryQuizApp: React.FC = () => {
                 answers: answers
                     .map((answer, index) => {
                         const questionId = questions[index]?.id;
-                        if (questionId === undefined) return null;
-                        return { questionId, userAnswer: answer };
+                        if (questionId === undefined || answer === '') return null;
+                        return { questionId, userAnswer: answer }; // Now sending answer text
                     })
-                    .filter((item): item is { questionId: number; userAnswer: number } => item !== null)
+                    .filter((item): item is { questionId: number; userAnswer: string } => item !== null)
             };
 
             const result = await apiService.submitQuiz(submission);
@@ -207,7 +191,7 @@ const CountryQuizApp: React.FC = () => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [selectedCountry, questions]);
 
     // Event Handlers
     const handleCountrySelect = (countryCode: string) => {
@@ -216,24 +200,41 @@ const CountryQuizApp: React.FC = () => {
         setSelectedCountryName(country?.name || '');
     };
 
-    const handleAnswerSelect = (answerIndex: number) => {
-        setSelectedAnswer(answerIndex);
+    const handleAnswerSelect = (answerText: string) => { // Changed parameter type
+        setSelectedAnswer(answerText);
     };
 
-    const handleNextQuestion = () => {
+    const handleNextQuestion = useCallback(() => {
         setTimerActive(false);
         const newAnswers = [...userAnswers, selectedAnswer];
         setUserAnswers(newAnswers);
 
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setSelectedAnswer(-1);
+            setSelectedAnswer(''); // Reset to empty string
             setTimeLeft(10);
             setTimerActive(true);
         } else {
             submitQuiz(newAnswers);
         }
-    };
+    }, [userAnswers, selectedAnswer, currentQuestionIndex, questions.length, submitQuiz]);
+
+    // Timer effect - placed after handleNextQuestion is declared
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+
+        if (timerActive && timeLeft > 0) {
+            interval = setInterval(() => {
+                setTimeLeft((prev) => prev - 1);
+            }, 1000);
+        } else if (timeLeft === 0 && timerActive) {
+            handleNextQuestion();
+        }
+
+        return () => {
+            if (interval) clearInterval(interval);
+        };
+    }, [timeLeft, timerActive, handleNextQuestion]);
 
     const resetQuiz = () => {
         setStep('select');
@@ -241,7 +242,7 @@ const CountryQuizApp: React.FC = () => {
         setSelectedCountryName('');
         setCurrentQuestionIndex(0);
         setUserAnswers([]);
-        setSelectedAnswer(-1);
+        setSelectedAnswer(''); // Reset to empty string
         setResult(null);
         setError('');
         setTimeLeft(10);
@@ -591,22 +592,22 @@ const CountryQuizApp: React.FC = () => {
     const renderAnswerOptions = () => (
         <RadioGroup
             value={selectedAnswer}
-            onChange={(e) => handleAnswerSelect(Number(e.target.value))}
+            onChange={(e) => handleAnswerSelect(e.target.value)} // Now passing string value
         >
             <Stack spacing={2}>
                 {questions[currentQuestionIndex]?.options.map((option, index) => (
                     <Paper
                         key={index}
-                        elevation={selectedAnswer === index ? 8 : 2}
+                        elevation={selectedAnswer === option ? 8 : 2} // Compare with option text
                         sx={{
                             p: 0,
                             borderRadius: 3,
-                            border: selectedAnswer === index ? 3 : 1,
-                            borderColor: selectedAnswer === index ? 'primary.main' : 'divider',
+                            border: selectedAnswer === option ? 3 : 1, // Compare with option text
+                            borderColor: selectedAnswer === option ? 'primary.main' : 'divider',
                             cursor: 'pointer',
                             transition: 'all 0.3s ease',
-                            transform: selectedAnswer === index ? 'scale(1.02)' : 'scale(1)',
-                            background: selectedAnswer === index
+                            transform: selectedAnswer === option ? 'scale(1.02)' : 'scale(1)',
+                            background: selectedAnswer === option
                                 ? 'linear-gradient(135deg, rgba(103, 126, 234, 0.1), rgba(118, 75, 162, 0.1))'
                                 : 'white',
                             '&:hover': {
@@ -614,10 +615,10 @@ const CountryQuizApp: React.FC = () => {
                                 boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
                             },
                         }}
-                        onClick={() => handleAnswerSelect(index)}
+                        onClick={() => handleAnswerSelect(option)} // Pass option text
                     >
                         <FormControlLabel
-                            value={index}
+                            value={option} // Use option text as value
                             control={<Radio sx={{ mr: 2 }} />}
                             label={
                                 <Typography variant="h6" sx={{ py: 2, fontWeight: 500 }}>
@@ -638,7 +639,7 @@ const CountryQuizApp: React.FC = () => {
                 variant="contained"
                 size="large"
                 onClick={handleNextQuestion}
-                disabled={selectedAnswer === -1 || loading}
+                disabled={selectedAnswer === '' || loading} // Check for empty string
                 endIcon={getButtonIcon()}
                 sx={{
                     px: 4,
@@ -830,7 +831,7 @@ const CountryQuizApp: React.FC = () => {
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            {questions[index]?.options[answer.userAnswer]}
+                                            {answer.userAnswer} {/* Now displays the actual answer text */}
                                         </Typography>
                                     </Box>
                                     {!answer.isCorrect && (
@@ -848,7 +849,7 @@ const CountryQuizApp: React.FC = () => {
                                                     fontWeight: 500,
                                                 }}
                                             >
-                                                {questions[index]?.options[answer.correctAnswer]}
+                                                {answer.correctAnswer} {/* Now displays the actual correct answer text */}
                                             </Typography>
                                         </Box>
                                     )}

@@ -8,7 +8,6 @@ export class CountriesController {
 
     @Get()
     getAllCountries(): CountryDto[] {
-        console.log('In getAllCountries()');
         return this.countriesService.findAll();
     }
 

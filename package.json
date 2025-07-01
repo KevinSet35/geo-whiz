@@ -1,39 +1,39 @@
 {
-  "name": "geo-whiz",
-  "version": "1.0.0",
-  "description": "A flexible monorepo template for multi-language projects",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:client": "npm run dev --workspace=@geo-whiz/client",
-    "dev:server": "npm run dev --workspace=@geo-whiz/server",
-    "build": "npm run build:types && npm run build:client && npm run build:server",
-    "build:client": "npm run build --workspace=@geo-whiz/client",
-    "build:server": "npm run build --workspace=@geo-whiz/server",
-    "start": "npm run start --workspace=@geo-whiz/server",
-    "start:client": "npm run start --workspace=@geo-whiz/client",
-    "start:server": "npm run start --workspace=@geo-whiz/server",
-    "lint": "npm run lint --workspaces",
-    "test": "npm run test --workspaces",
-    "clean": "rimraf packages/*/dist packages/*/build",
-    "build:types": "npm run build --workspace=@geo-whiz/types",
-    "dev:types": "npm run dev --workspace=@geo-whiz/types",
-    "type-check": "tsc --noEmit",
-    "type-check:watch": "tsc --noEmit --watch"
-  },
-  "keywords": [
-    "monorepo",
-    "template",
-    "workspace",
-    "polyglot"
-  ],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "rimraf": "^5.0.10"
-  }
+    "name": "geo-whiz",
+    "version": "1.0.0",
+    "description": "A flexible monorepo template for multi-language projects",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+        "dev:client": "npm run dev --workspace=@geo-whiz/client",
+        "dev:server": "npm run dev --workspace=@geo-whiz/server",
+        "build": "npm run build:types && npm run build:server && npm run build:client",
+        "build:client": "npm run build --workspace=@geo-whiz/client",
+        "build:server": "npm run build --workspace=@geo-whiz/server",
+        "start": "npm run start --workspace=@geo-whiz/server",
+        "start:client": "npm run start --workspace=@geo-whiz/client",
+        "start:server": "npm run start --workspace=@geo-whiz/server",
+        "lint": "npm run lint --workspaces",
+        "test": "npm run test --workspaces",
+        "clean": "rimraf packages/*/dist packages/*/build",
+        "build:types": "npm run build --workspace=@geo-whiz/types",
+        "dev:types": "npm run dev --workspace=@geo-whiz/types",
+        "type-check": "tsc --noEmit",
+        "type-check:watch": "tsc --noEmit --watch"
+    },
+    "keywords": [
+        "monorepo",
+        "template",
+        "workspace",
+        "polyglot"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "rimraf": "^5.0.10"
+    }
 }
