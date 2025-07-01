@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CssBaseline, Box } from '@mui/material';
+import { CssBaseline, Box, AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import { keyframes } from '@mui/system';
+import {
+    Quiz as QuizIcon,
+    Leaderboard as LeaderboardIcon,
+    Home as HomeIcon,
+} from '@mui/icons-material';
 import CountryQuizApp from './CountryQuizApp';
+import LeaderboardComponent from './LeaderboardComponent';
 
 // Global Animations (shared across the app)
 export const float = keyframes`
@@ -159,6 +165,74 @@ const theme = createTheme({
     },
 });
 
+// Navigation Component
+interface NavigationProps {
+    currentPage: string;
+    onPageChange: (page: string) => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ currentPage, onPageChange }) => (
+    <AppBar
+        position="static"
+        elevation={0}
+        sx={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(10px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+        }}
+    >
+        <Container maxWidth="lg">
+            <Toolbar sx={{ justifyContent: 'space-between', py: 1 }}>
+                <Typography variant="h6" sx={{
+                    fontWeight: 800,
+                    color: 'white',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1
+                }}>
+                    🌍 GeoQuiz
+                </Typography>
+
+                <Box sx={{ display: 'flex', gap: 2 }}>
+                    <Button
+                        variant={currentPage === 'quiz' ? 'contained' : 'outlined'}
+                        startIcon={<QuizIcon />}
+                        onClick={() => onPageChange('quiz')}
+                        sx={{
+                            color: 'white',
+                            borderColor: 'rgba(255, 255, 255, 0.5)',
+                            backgroundColor: currentPage === 'quiz' ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                            '&:hover': {
+                                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                                borderColor: 'white',
+                            },
+                        }}
+                    >
+                        Take Quiz
+                    </Button>
+
+                    <Button
+                        variant={currentPage === 'leaderboard' ? 'contained' : 'outlined'}
+                        startIcon={<LeaderboardIcon />}
+                        onClick={() => onPageChange('leaderboard')}
+                        sx={{
+                            color: 'white',
+                            borderColor: 'rgba(255, 255, 255, 0.5)',
+                            backgroundColor: currentPage === 'leaderboard' ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                            '&:hover': {
+                                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                                borderColor: 'white',
+                            },
+                        }}
+                    >
+                        Leaderboard
+                    </Button>
+                </Box>
+            </Toolbar>
+        </Container>
+    </AppBar>
+);
+
 // Background Floating Elements Component
 const FloatingElements: React.FC = () => (
     <>
@@ -293,11 +367,25 @@ const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 function App() {
+    const [currentPage, setCurrentPage] = useState<string>('quiz');
+
+    const renderCurrentPage = () => {
+        switch (currentPage) {
+            case 'quiz':
+                return <CountryQuizApp />;
+            case 'leaderboard':
+                return <LeaderboardComponent />;
+            default:
+                return <CountryQuizApp />;
+        }
+    };
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <AppLayout>
-                <CountryQuizApp />
+                <Navigation currentPage={currentPage} onPageChange={setCurrentPage} />
+                {renderCurrentPage()}
             </AppLayout>
         </ThemeProvider>
     );
