@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "São Paulo",
+            "Rio de Janeiro",
+            "Brasília",
+            "Salvador",
+            "Belo Horizonte"
+        ],
+        "correctAnswer": "Brasília"
+    },
+    {
+        "id": 2,
+        "question": "What is the largest river in Brazil?",
+        "options": [
+            "Paraná River",
+            "São Francisco River",
+            "Amazon River",
+            "Tocantins River",
+            "Uruguay River"
+        ],
+        "correctAnswer": "Amazon River"
+    },
+    {
+        "id": 3,
+        "question": "What is the currency of Brazil?",
+        "options": [
+            "Brazilian Peso",
+            "Brazilian Real",
+            "Brazilian Dollar",
+            "Cruzeiro",
+            "Cruzado"
+        ],
+        "correctAnswer": "Brazilian Real"
+    },
+    {
+        "id": 4,
+        "question": "Which ocean borders Brazil to the east?",
+        "options": [
+            "Pacific Ocean",
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
+        ],
+        "correctAnswer": "Atlantic Ocean"
+    },
+    {
+        "id": 5,
+        "question": "What is the official language of Brazil?",
+        "options": [
+            "Spanish",
+            "English",
+            "Portuguese",
+            "French",
+            "Italian"
+        ],
+        "correctAnswer": "Portuguese"
+    },
+    {
+        "id": 6,
+        "question": "Which famous statue is located in Rio de Janeiro?",
+        "options": [
+            "Statue of Liberty",
+            "Christ the Redeemer",
+            "The Thinker",
+            "David",
+            "Venus de Milo"
+        ],
+        "correctAnswer": "Christ the Redeemer"
+    },
+    {
+        "id": 7,
+        "question": "What is the largest rainforest in Brazil?",
+        "options": [
+            "Atlantic Forest",
+            "Cerrado",
+            "Amazon Rainforest",
+            "Caatinga",
+            "Pantanal"
+        ],
+        "correctAnswer": "Amazon Rainforest"
+    },
+    {
+        "id": 8,
+        "question": "Which mountain range is located in Brazil?",
+        "options": [
+            "Andes",
+            "Brazilian Highlands",
+            "Rocky Mountains",
+            "Himalayas",
+            "Alps"
+        ],
+        "correctAnswer": "Brazilian Highlands"
+    },
+    {
+        "id": 9,
+        "question": "What is the most populous city in Brazil?",
+        "options": [
+            "Rio de Janeiro",
+            "Brasília",
+            "São Paulo",
+            "Salvador",
+            "Fortaleza"
+        ],
+        "correctAnswer": "São Paulo"
+    },
+    {
+        "id": 10,
+        "question": "Which famous beach is located in Rio de Janeiro?",
+        "options": [
+            "Bondi Beach",
+            "Copacabana",
+            "Waikiki Beach",
+            "Miami Beach",
+            "Santa Monica Beach"
+        ],
+        "correctAnswer": "Copacabana"
+    },
+    {
+        "id": 11,
+        "question": "What is the largest wetland in Brazil?",
+        "options": [
+            "Amazon Basin",
+            "Pantanal",
+            "Cerrado",
+            "Atlantic Forest",
+            "Caatinga"
+        ],
+        "correctAnswer": "Pantanal"
+    },
+    {
+        "id": 12,
+        "question": "Which waterfall is located on the border between Brazil and Argentina?",
+        "options": [
+            "Angel Falls",
+            "Niagara Falls",
+            "Iguazu Falls",
+            "Victoria Falls",
+            "Kaieteur Falls"
+        ],
+        "correctAnswer": "Iguazu Falls"
+    },
+    {
+        "id": 13,
+        "question": "What is Brazil's most famous carnival celebration held?",
+        "options": [
+            "São Paulo",
+            "Salvador",
+            "Rio de Janeiro",
+            "Brasília",
+            "Recife"
+        ],
+        "correctAnswer": "Rio de Janeiro"
+    },
+    {
+        "id": 14,
+        "question": "Which country does NOT border Brazil?",
+        "options": [
+            "Argentina",
+            "Colombia",
+            "Chile",
+            "Peru",
+            "Venezuela"
+        ],
+        "correctAnswer": "Chile"
+    },
+    {
+        "id": 15,
+        "question": "What is the name of Brazil's space center?",
+        "options": [
+            "Alcântara Launch Center",
+            "Kennedy Space Center",
+            "Baikonur Cosmodrome",
+            "Guiana Space Centre",
+            "Tanegashima Space Center"
+        ],
+        "correctAnswer": "Alcântara Launch Center"
+    },
+    {
+        "id": 16,
+        "question": "Which Brazilian state is known for its coffee production?",
+        "options": [
+            "Amazonas",
+            "Bahia",
+            "Minas Gerais",
+            "Rio Grande do Sul",
+            "Ceará"
+        ],
+        "correctAnswer": "Minas Gerais"
+    },
+    {
+        "id": 17,
+        "question": "What is the time zone of most of Brazil?",
+        "options": [
+            "UTC-2",
+            "UTC-3",
+            "UTC-4",
+            "UTC-5",
+            "UTC-6"
+        ],
+        "correctAnswer": "UTC-3"
+    },
+    {
+        "id": 18,
+        "question": "Which Brazilian city hosted the 2016 Summer Olympics?",
+        "options": [
+            "São Paulo",
+            "Brasília",
+            "Rio de Janeiro",
+            "Salvador",
+            "Belo Horizonte"
+        ],
+        "correctAnswer": "Rio de Janeiro"
+    },
+    {
+        "id": 19,
+        "question": "What percentage of the Amazon rainforest is located in Brazil?",
+        "options": [
+            "40%",
+            "50%",
+            "60%",
+            "70%",
+            "80%"
+        ],
+        "correctAnswer": "60%"
+    },
+    {
+        "id": 20,
+        "question": "Which is the southernmost state of Brazil?",
+        "options": [
+            "Santa Catarina",
+            "Paraná",
+            "Rio Grande do Sul",
+            "São Paulo",
+            "Mato Grosso do Sul"
+        ],
+        "correctAnswer": "Rio Grande do Sul"
+    }
+]

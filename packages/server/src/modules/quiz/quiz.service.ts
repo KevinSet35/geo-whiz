@@ -2,9 +2,20 @@ import { Injectable } from '@nestjs/common';
 import { CountriesService } from '../countries/countries.service';
 import { QuestionDto, QuizSubmissionDto, QuizResultDto } from './dto/question.dto';
 import { shuffleArray, selectRandomElements } from '../../utility/array.utils';
+
+// Import individual country question files
 import * as usQuestions from './data/questions/us.json';
 import * as frQuestions from './data/questions/fr.json';
 import * as jpQuestions from './data/questions/jp.json';
+import * as brQuestions from './data/questions/br.json';
+import * as auQuestions from './data/questions/au.json';
+import * as deQuestions from './data/questions/de.json';
+import * as inQuestions from './data/questions/in.json';
+import * as cnQuestions from './data/questions/cn.json';
+import * as gbQuestions from './data/questions/gb.json';
+import * as itQuestions from './data/questions/it.json';
+import * as esQuestions from './data/questions/es.json';
+import * as caQuestions from './data/questions/ca.json';
 
 interface QuestionTemplate {
     id: number;
@@ -16,7 +27,16 @@ interface QuestionTemplate {
 const COUNTRY_QUESTION_DATA = {
     'US': usQuestions,
     'FR': frQuestions,
-    'JP': jpQuestions
+    'JP': jpQuestions,
+    'BR': brQuestions,
+    'AU': auQuestions,
+    'DE': deQuestions,
+    'IN': inQuestions,
+    'CN': cnQuestions,
+    'GB': gbQuestions,
+    'IT': itQuestions,
+    'ES': esQuestions,
+    'CA': caQuestions
 } as const;
 
 @Injectable()

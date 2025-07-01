@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Munich",
+            "Hamburg",
+            "Berlin",
+            "Frankfurt",
+            "Cologne"
+        ],
+        "correctAnswer": "Berlin"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of Germany?",
+        "options": [
+            "Deutsche Mark",
+            "Euro",
+            "German Franc",
+            "German Pound",
+            "German Dollar"
+        ],
+        "correctAnswer": "Euro"
+    },
+    {
+        "id": 3,
+        "question": "Which river flows through Berlin?",
+        "options": [
+            "Rhine",
+            "Danube",
+            "Elbe",
+            "Spree",
+            "Main"
+        ],
+        "correctAnswer": "Spree"
+    },
+    {
+        "id": 4,
+        "question": "What is the longest river in Germany?",
+        "options": [
+            "Rhine",
+            "Danube",
+            "Elbe",
+            "Weser",
+            "Main"
+        ],
+        "correctAnswer": "Rhine"
+    },
+    {
+        "id": 5,
+        "question": "Which mountain range is located in southern Germany?",
+        "options": [
+            "Alps",
+            "Black Forest",
+            "Bavarian Alps",
+            "Harz Mountains",
+            "Vosges"
+        ],
+        "correctAnswer": "Bavarian Alps"
+    },
+    {
+        "id": 6,
+        "question": "What is the largest state in Germany by area?",
+        "options": [
+            "North Rhine-Westphalia",
+            "Bavaria",
+            "Lower Saxony",
+            "Baden-Württemberg",
+            "Saxony"
+        ],
+        "correctAnswer": "Bavaria"
+    },
+    {
+        "id": 7,
+        "question": "Which sea borders Germany to the north?",
+        "options": [
+            "Mediterranean Sea",
+            "Baltic Sea",
+            "North Sea",
+            "Baltic and North Seas",
+            "Adriatic Sea"
+        ],
+        "correctAnswer": "Baltic and North Seas"
+    },
+    {
+        "id": 8,
+        "question": "What is the highest mountain in Germany?",
+        "options": [
+            "Zugspitze",
+            "Watzmann",
+            "Hoher Göll",
+            "Hochfrottspitze",
+            "Schneefernerkopf"
+        ],
+        "correctAnswer": "Zugspitze"
+    },
+    {
+        "id": 9,
+        "question": "Which city is known as Germany's financial center?",
+        "options": [
+            "Berlin",
+            "Munich",
+            "Frankfurt",
+            "Hamburg",
+            "Düsseldorf"
+        ],
+        "correctAnswer": "Frankfurt"
+    },
+    {
+        "id": 10,
+        "question": "What famous structure was torn down in Berlin in 1989?",
+        "options": [
+            "Brandenburg Gate",
+            "Berlin Wall",
+            "Reichstag",
+            "Checkpoint Charlie",
+            "Potsdamer Platz"
+        ],
+        "correctAnswer": "Berlin Wall"
+    },
+    {
+        "id": 11,
+        "question": "Which German city is famous for Oktoberfest?",
+        "options": [
+            "Berlin",
+            "Hamburg",
+            "Munich",
+            "Cologne",
+            "Stuttgart"
+        ],
+        "correctAnswer": "Munich"
+    },
+    {
+        "id": 12,
+        "question": "How many states (Länder) does Germany have?",
+        "options": [
+            "14",
+            "15",
+            "16",
+            "17",
+            "18"
+        ],
+        "correctAnswer": "16"
+    },
+    {
+        "id": 13,
+        "question": "Which forest region is famous for cuckoo clocks?",
+        "options": [
+            "Bavarian Forest",
+            "Black Forest",
+            "Thuringian Forest",
+            "Harz Mountains",
+            "Spessart"
+        ],
+        "correctAnswer": "Black Forest"
+    },
+    {
+        "id": 14,
+        "question": "What is the most populous city in Germany?",
+        "options": [
+            "Munich",
+            "Hamburg",
+            "Berlin",
+            "Cologne",
+            "Frankfurt"
+        ],
+        "correctAnswer": "Berlin"
+    },
+    {
+        "id": 15,
+        "question": "Which country does NOT border Germany?",
+        "options": [
+            "France",
+            "Poland",
+            "Italy",
+            "Netherlands",
+            "Czech Republic"
+        ],
+        "correctAnswer": "Italy"
+    },
+    {
+        "id": 16,
+        "question": "What is the famous castle that inspired Disney's Sleeping Beauty Castle?",
+        "options": [
+            "Heidelberg Castle",
+            "Neuschwanstein Castle",
+            "Wartburg Castle",
+            "Hohenzollern Castle",
+            "Sanssouci Palace"
+        ],
+        "correctAnswer": "Neuschwanstein Castle"
+    },
+    {
+        "id": 17,
+        "question": "Which German city has the largest port?",
+        "options": [
+            "Bremen",
+            "Hamburg",
+            "Rostock",
+            "Kiel",
+            "Lübeck"
+        ],
+        "correctAnswer": "Hamburg"
+    },
+    {
+        "id": 18,
+        "question": "What is the famous German highway system called?",
+        "options": [
+            "Autobahn",
+            "Bundesstraße",
+            "Landstraße",
+            "Schnellweg",
+            "Fernstraße"
+        ],
+        "correctAnswer": "Autobahn"
+    },
+    {
+        "id": 19,
+        "question": "Which river forms part of Germany's border with France?",
+        "options": [
+            "Danube",
+            "Rhine",
+            "Elbe",
+            "Main",
+            "Moselle"
+        ],
+        "correctAnswer": "Rhine"
+    },
+    {
+        "id": 20,
+        "question": "What is the climate type of most of Germany?",
+        "options": [
+            "Mediterranean",
+            "Continental",
+            "Oceanic",
+            "Temperate oceanic",
+            "Subtropical"
+        ],
+        "correctAnswer": "Temperate oceanic"
+    }
+]

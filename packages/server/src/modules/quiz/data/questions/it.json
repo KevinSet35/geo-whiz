@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Milan",
+            "Naples",
+            "Rome",
+            "Florence",
+            "Venice"
+        ],
+        "correctAnswer": "Rome"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of Italy?",
+        "options": [
+            "Italian Lira",
+            "Euro",
+            "Italian Franc",
+            "Italian Pound",
+            "Italian Dollar"
+        ],
+        "correctAnswer": "Euro"
+    },
+    {
+        "id": 3,
+        "question": "Which famous leaning tower is located in Italy?",
+        "options": [
+            "Tower of Pisa",
+            "Tower of Florence",
+            "Tower of Venice",
+            "Tower of Rome",
+            "Tower of Milan"
+        ],
+        "correctAnswer": "Tower of Pisa"
+    },
+    {
+        "id": 4,
+        "question": "What is the longest river in Italy?",
+        "options": [
+            "Tiber",
+            "Arno",
+            "Po",
+            "Adige",
+            "Volturno"
+        ],
+        "correctAnswer": "Po"
+    },
+    {
+        "id": 5,
+        "question": "Which volcano destroyed the ancient city of Pompeii?",
+        "options": [
+            "Mount Etna",
+            "Mount Vesuvius",
+            "Stromboli",
+            "Vulcano",
+            "Mount Vulture"
+        ],
+        "correctAnswer": "Mount Vesuvius"
+    },
+    {
+        "id": 6,
+        "question": "What is the largest island in Italy?",
+        "options": [
+            "Sardinia",
+            "Sicily",
+            "Corsica",
+            "Elba",
+            "Capri"
+        ],
+        "correctAnswer": "Sicily"
+    },
+    {
+        "id": 7,
+        "question": "Which mountain range runs through northern Italy?",
+        "options": [
+            "Pyrenees",
+            "Carpathians",
+            "Alps",
+            "Apennines",
+            "Dolomites"
+        ],
+        "correctAnswer": "Alps"
+    },
+    {
+        "id": 8,
+        "question": "What is the famous amphitheater in Rome called?",
+        "options": [
+            "Pantheon",
+            "Colosseum",
+            "Forum",
+            "Circus Maximus",
+            "Castel Sant'Angelo"
+        ],
+        "correctAnswer": "Colosseum"
+    },
+    {
+        "id": 9,
+        "question": "Which Italian city is famous for its canals?",
+        "options": [
+            "Rome",
+            "Florence",
+            "Venice",
+            "Milan",
+            "Naples"
+        ],
+        "correctAnswer": "Venice"
+    },
+    {
+        "id": 10,
+        "question": "What is the fashion and design capital of Italy?",
+        "options": [
+            "Rome",
+            "Florence",
+            "Venice",
+            "Milan",
+            "Turin"
+        ],
+        "correctAnswer": "Milan"
+    },
+    {
+        "id": 11,
+        "question": "Which sea surrounds the Italian peninsula?",
+        "options": [
+            "Adriatic Sea",
+            "Mediterranean Sea",
+            "Ionian Sea",
+            "Tyrrhenian Sea",
+            "All of the above"
+        ],
+        "correctAnswer": "All of the above"
+    },
+    {
+        "id": 12,
+        "question": "What is the smallest country entirely surrounded by Italy?",
+        "options": [
+            "Monaco",
+            "San Marino",
+            "Vatican City",
+            "Liechtenstein",
+            "Andorra"
+        ],
+        "correctAnswer": "Vatican City"
+    },
+    {
+        "id": 13,
+        "question": "Which region is known for the Renaissance art and culture?",
+        "options": [
+            "Lombardy",
+            "Veneto",
+            "Tuscany",
+            "Lazio",
+            "Campania"
+        ],
+        "correctAnswer": "Tuscany"
+    },
+    {
+        "id": 14,
+        "question": "What is the highest mountain in Italy?",
+        "options": [
+            "Mont Blanc",
+            "Matterhorn",
+            "Monte Rosa",
+            "Gran Paradiso",
+            "Monte Bianco"
+        ],
+        "correctAnswer": "Mont Blanc"
+    },
+    {
+        "id": 15,
+        "question": "Which Italian lake is the largest?",
+        "options": [
+            "Lake Como",
+            "Lake Maggiore",
+            "Lake Garda",
+            "Lake Trasimeno",
+            "Lake Bolsena"
+        ],
+        "correctAnswer": "Lake Garda"
+    },
+    {
+        "id": 16,
+        "question": "What shape is Italy often compared to?",
+        "options": [
+            "A hand",
+            "A boot",
+            "A peninsula",
+            "A leg",
+            "A sword"
+        ],
+        "correctAnswer": "A boot"
+    },
+    {
+        "id": 17,
+        "question": "Which Italian city is home to the Vatican?",
+        "options": [
+            "Florence",
+            "Milan",
+            "Naples",
+            "Rome",
+            "Venice"
+        ],
+        "correctAnswer": "Rome"
+    },
+    {
+        "id": 18,
+        "question": "What is the active volcano on the island of Sicily?",
+        "options": [
+            "Mount Vesuvius",
+            "Mount Etna",
+            "Stromboli",
+            "Vulcano",
+            "Mount Vulture"
+        ],
+        "correctAnswer": "Mount Etna"
+    },
+    {
+        "id": 19,
+        "question": "Which Italian region is famous for wine production, especially Chianti?",
+        "options": [
+            "Piedmont",
+            "Veneto",
+            "Tuscany",
+            "Sicily",
+            "Umbria"
+        ],
+        "correctAnswer": "Tuscany"
+    },
+    {
+        "id": 20,
+        "question": "How many regions does Italy have?",
+        "options": [
+            "18",
+            "19",
+            "20",
+            "21",
+            "22"
+        ],
+        "correctAnswer": "20"
+    }
+]

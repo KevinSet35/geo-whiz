@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of China?",
+        "options": [
+            "Shanghai",
+            "Beijing",
+            "Guangzhou",
+            "Shenzhen",
+            "Tianjin"
+        ],
+        "correctAnswer": "Beijing"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of China?",
+        "options": [
+            "Chinese Yuan",
+            "Chinese Dollar",
+            "Chinese Yen",
+            "Chinese Won",
+            "Chinese Rupee"
+        ],
+        "correctAnswer": "Chinese Yuan"
+    },
+    {
+        "id": 3,
+        "question": "What is the longest river in China?",
+        "options": [
+            "Yellow River",
+            "Yangtze River",
+            "Pearl River",
+            "Mekong River",
+            "Heilongjiang River"
+        ],
+        "correctAnswer": "Yangtze River"
+    },
+    {
+        "id": 4,
+        "question": "What is the famous wall built to defend China called?",
+        "options": [
+            "Great Wall of China",
+            "Ming Wall",
+            "Imperial Wall",
+            "Dragon Wall",
+            "Emperor's Wall"
+        ],
+        "correctAnswer": "Great Wall of China"
+    },
+    {
+        "id": 5,
+        "question": "What is the most populous city in China?",
+        "options": [
+            "Beijing",
+            "Shanghai",
+            "Guangzhou",
+            "Shenzhen",
+            "Chongqing"
+        ],
+        "correctAnswer": "Shanghai"
+    },
+    {
+        "id": 6,
+        "question": "Which mountain range contains the world's highest peak?",
+        "options": [
+            "Kunlun Mountains",
+            "Himalayas",
+            "Tian Shan",
+            "Altai Mountains",
+            "Qinling Mountains"
+        ],
+        "correctAnswer": "Himalayas"
+    },
+    {
+        "id": 7,
+        "question": "What is the largest desert in China?",
+        "options": [
+            "Gobi Desert",
+            "Taklamakan Desert",
+            "Badain Jaran Desert",
+            "Tengger Desert",
+            "Kumtag Desert"
+        ],
+        "correctAnswer": "Taklamakan Desert"
+    },
+    {
+        "id": 8,
+        "question": "Which ancient city houses the Terracotta Army?",
+        "options": [
+            "Beijing",
+            "Shanghai",
+            "Xi'an",
+            "Nanjing",
+            "Luoyang"
+        ],
+        "correctAnswer": "Xi'an"
+    },
+    {
+        "id": 9,
+        "question": "How many provinces does China have?",
+        "options": [
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"
+        ],
+        "correctAnswer": "23"
+    },
+    {
+        "id": 10,
+        "question": "What is the forbidden palace in Beijing called?",
+        "options": [
+            "Summer Palace",
+            "Forbidden City",
+            "Imperial Palace",
+            "Temple of Heaven",
+            "Ming Palace"
+        ],
+        "correctAnswer": "Forbidden City"
+    },
+    {
+        "id": 11,
+        "question": "Which sea is located to the east of China?",
+        "options": [
+            "Yellow Sea",
+            "East China Sea",
+            "South China Sea",
+            "Sea of Japan",
+            "Philippine Sea"
+        ],
+        "correctAnswer": "East China Sea"
+    },
+    {
+        "id": 12,
+        "question": "What is the highest mountain in China?",
+        "options": [
+            "K2",
+            "Mount Everest",
+            "Cho Oyu",
+            "Lhotse",
+            "Makalu"
+        ],
+        "correctAnswer": "Mount Everest"
+    },
+    {
+        "id": 13,
+        "question": "Which river is known as China's Sorrow due to frequent flooding?",
+        "options": [
+            "Yangtze River",
+            "Yellow River",
+            "Pearl River",
+            "Mekong River",
+            "Brahmaputra River"
+        ],
+        "correctAnswer": "Yellow River"
+    },
+    {
+        "id": 14,
+        "question": "What is the autonomous region in western China known for its Uyghur population?",
+        "options": [
+            "Tibet",
+            "Inner Mongolia",
+            "Xinjiang",
+            "Ningxia",
+            "Guangxi"
+        ],
+        "correctAnswer": "Xinjiang"
+    },
+    {
+        "id": 15,
+        "question": "Which Chinese city is known as the Pearl of the Orient?",
+        "options": [
+            "Beijing",
+            "Shanghai",
+            "Hong Kong",
+            "Guangzhou",
+            "Shenzhen"
+        ],
+        "correctAnswer": "Shanghai"
+    },
+    {
+        "id": 16,
+        "question": "What is the traditional Chinese medicine practice using needles called?",
+        "options": [
+            "Acupuncture",
+            "Cupping",
+            "Moxibustion",
+            "Qigong",
+            "Tai Chi"
+        ],
+        "correctAnswer": "Acupuncture"
+    },
+    {
+        "id": 17,
+        "question": "Which plateau is often called the Roof of the World?",
+        "options": [
+            "Mongolian Plateau",
+            "Yunnan-Guizhou Plateau",
+            "Tibetan Plateau",
+            "Loess Plateau",
+            "Inner Mongolian Plateau"
+        ],
+        "correctAnswer": "Tibetan Plateau"
+    },
+    {
+        "id": 18,
+        "question": "What is the special administrative region that was returned to China in 1997?",
+        "options": [
+            "Macau",
+            "Hong Kong",
+            "Taiwan",
+            "Hainan",
+            "Tibet"
+        ],
+        "correctAnswer": "Hong Kong"
+    },
+    {
+        "id": 19,
+        "question": "Which ancient trade route connected China to the Mediterranean?",
+        "options": [
+            "Spice Route",
+            "Silk Road",
+            "Tea Route",
+            "Porcelain Route",
+            "Jade Route"
+        ],
+        "correctAnswer": "Silk Road"
+    },
+    {
+        "id": 20,
+        "question": "What is the major manufacturing city in southern China known as the world's factory?",
+        "options": [
+            "Guangzhou",
+            "Shenzhen",
+            "Dongguan",
+            "Foshan",
+            "Zhuhai"
+        ],
+        "correctAnswer": "Shenzhen"
+    }
+]

@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of the United Kingdom?",
+        "options": [
+            "Edinburgh",
+            "Cardiff",
+            "London",
+            "Belfast",
+            "Manchester"
+        ],
+        "correctAnswer": "London"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of the United Kingdom?",
+        "options": [
+            "Euro",
+            "British Pound",
+            "British Dollar",
+            "Sterling",
+            "Crown"
+        ],
+        "correctAnswer": "British Pound"
+    },
+    {
+        "id": 3,
+        "question": "How many countries make up the United Kingdom?",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correctAnswer": "4"
+    },
+    {
+        "id": 4,
+        "question": "What is the longest river in the United Kingdom?",
+        "options": [
+            "Thames",
+            "Severn",
+            "Trent",
+            "Great Ouse",
+            "Wye"
+        ],
+        "correctAnswer": "Severn"
+    },
+    {
+        "id": 5,
+        "question": "Which mountain is the highest in the United Kingdom?",
+        "options": [
+            "Snowdon",
+            "Scafell Pike",
+            "Ben Nevis",
+            "Helvellyn",
+            "Cross Fell"
+        ],
+        "correctAnswer": "Ben Nevis"
+    },
+    {
+        "id": 6,
+        "question": "What is the capital of Scotland?",
+        "options": [
+            "Glasgow",
+            "Aberdeen",
+            "Edinburgh",
+            "Dundee",
+            "Stirling"
+        ],
+        "correctAnswer": "Edinburgh"
+    },
+    {
+        "id": 7,
+        "question": "What is the capital of Wales?",
+        "options": [
+            "Swansea",
+            "Cardiff",
+            "Newport",
+            "Wrexham",
+            "Bangor"
+        ],
+        "correctAnswer": "Cardiff"
+    },
+    {
+        "id": 8,
+        "question": "Which body of water separates England from France?",
+        "options": [
+            "North Sea",
+            "Irish Sea",
+            "English Channel",
+            "Celtic Sea",
+            "Atlantic Ocean"
+        ],
+        "correctAnswer": "English Channel"
+    },
+    {
+        "id": 9,
+        "question": "What is the famous clock tower in London called?",
+        "options": [
+            "Big Ben",
+            "Clock Tower",
+            "Westminster Tower",
+            "Elizabeth Tower",
+            "Parliament Tower"
+        ],
+        "correctAnswer": "Big Ben"
+    },
+    {
+        "id": 10,
+        "question": "Which prehistoric monument is located in Wiltshire?",
+        "options": [
+            "Avebury",
+            "Stonehenge",
+            "Silbury Hill",
+            "West Kennet Long Barrow",
+            "Durrington Walls"
+        ],
+        "correctAnswer": "Stonehenge"
+    },
+    {
+        "id": 11,
+        "question": "What is the largest city in Scotland?",
+        "options": [
+            "Edinburgh",
+            "Glasgow",
+            "Aberdeen",
+            "Dundee",
+            "Stirling"
+        ],
+        "correctAnswer": "Glasgow"
+    },
+    {
+        "id": 12,
+        "question": "Which university cities are famous for their prestigious universities?",
+        "options": [
+            "Oxford and Cambridge",
+            "London and Edinburgh",
+            "Manchester and Liverpool",
+            "Bristol and Bath",
+            "Durham and York"
+        ],
+        "correctAnswer": "Oxford and Cambridge"
+    },
+    {
+        "id": 13,
+        "question": "What is the name of the royal residence in London?",
+        "options": [
+            "Windsor Castle",
+            "Buckingham Palace",
+            "Kensington Palace",
+            "St. James's Palace",
+            "Hampton Court"
+        ],
+        "correctAnswer": "Buckingham Palace"
+    },
+    {
+        "id": 14,
+        "question": "Which sea is to the west of the United Kingdom?",
+        "options": [
+            "North Sea",
+            "English Channel",
+            "Irish Sea",
+            "Celtic Sea",
+            "Atlantic Ocean"
+        ],
+        "correctAnswer": "Irish Sea"
+    },
+    {
+        "id": 15,
+        "question": "What is the financial district of London called?",
+        "options": [
+            "Westminster",
+            "The City",
+            "Canary Wharf",
+            "Mayfair",
+            "Kensington"
+        ],
+        "correctAnswer": "The City"
+    },
+    {
+        "id": 16,
+        "question": "Which lake is the largest in England?",
+        "options": [
+            "Lake Windermere",
+            "Coniston Water",
+            "Ullswater",
+            "Derwentwater",
+            "Bassenthwaite Lake"
+        ],
+        "correctAnswer": "Lake Windermere"
+    },
+    {
+        "id": 17,
+        "question": "What is the national flower of England?",
+        "options": [
+            "Daffodil",
+            "Thistle",
+            "Rose",
+            "Shamrock",
+            "Lily"
+        ],
+        "correctAnswer": "Rose"
+    },
+    {
+        "id": 18,
+        "question": "Which tunnel connects England and France?",
+        "options": [
+            "Severn Tunnel",
+            "Channel Tunnel",
+            "Mersey Tunnel",
+            "Tyne Tunnel",
+            "Dartford Tunnel"
+        ],
+        "correctAnswer": "Channel Tunnel"
+    },
+    {
+        "id": 19,
+        "question": "What is the northernmost country of the United Kingdom?",
+        "options": [
+            "England",
+            "Wales",
+            "Scotland",
+            "Northern Ireland",
+            "Isle of Man"
+        ],
+        "correctAnswer": "Scotland"
+    },
+    {
+        "id": 20,
+        "question": "Which British territory is located at the southern tip of Spain?",
+        "options": [
+            "Isle of Wight",
+            "Channel Islands",
+            "Gibraltar",
+            "Falkland Islands",
+            "Bermuda"
+        ],
+        "correctAnswer": "Gibraltar"
+    }
+]

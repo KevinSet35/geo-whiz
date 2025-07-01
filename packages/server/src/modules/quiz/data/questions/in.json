@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of India?",
+        "options": [
+            "Mumbai",
+            "Kolkata",
+            "New Delhi",
+            "Chennai",
+            "Bangalore"
+        ],
+        "correctAnswer": "New Delhi"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of India?",
+        "options": [
+            "Indian Rupee",
+            "Indian Dollar",
+            "Indian Pound",
+            "Indian Franc",
+            "Indian Yuan"
+        ],
+        "correctAnswer": "Indian Rupee"
+    },
+    {
+        "id": 3,
+        "question": "Which is the longest river in India?",
+        "options": [
+            "Yamuna",
+            "Ganges",
+            "Brahmaputra",
+            "Godavari",
+            "Krishna"
+        ],
+        "correctAnswer": "Ganges"
+    },
+    {
+        "id": 4,
+        "question": "Which mountain range separates India from China?",
+        "options": [
+            "Western Ghats",
+            "Eastern Ghats",
+            "Himalayas",
+            "Aravalli Range",
+            "Vindhya Range"
+        ],
+        "correctAnswer": "Himalayas"
+    },
+    {
+        "id": 5,
+        "question": "What is the most populous city in India?",
+        "options": [
+            "New Delhi",
+            "Mumbai",
+            "Kolkata",
+            "Chennai",
+            "Bangalore"
+        ],
+        "correctAnswer": "Mumbai"
+    },
+    {
+        "id": 6,
+        "question": "Which ocean is to the south of India?",
+        "options": [
+            "Pacific Ocean",
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Southern Ocean"
+        ],
+        "correctAnswer": "Indian Ocean"
+    },
+    {
+        "id": 7,
+        "question": "What is the famous mausoleum located in Agra?",
+        "options": [
+            "Red Fort",
+            "Taj Mahal",
+            "Hawa Mahal",
+            "Golden Temple",
+            "Qutub Minar"
+        ],
+        "correctAnswer": "Taj Mahal"
+    },
+    {
+        "id": 8,
+        "question": "How many states does India have?",
+        "options": [
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"
+        ],
+        "correctAnswer": "28"
+    },
+    {
+        "id": 9,
+        "question": "Which is the smallest state in India by area?",
+        "options": [
+            "Sikkim",
+            "Tripura",
+            "Goa",
+            "Manipur",
+            "Nagaland"
+        ],
+        "correctAnswer": "Goa"
+    },
+    {
+        "id": 10,
+        "question": "What is the highest mountain peak in India?",
+        "options": [
+            "Kanchenjunga",
+            "Nanda Devi",
+            "Kamet",
+            "Saltoro Kangri",
+            "Mount Everest"
+        ],
+        "correctAnswer": "Kanchenjunga"
+    },
+    {
+        "id": 11,
+        "question": "Which desert is located in northwestern India?",
+        "options": [
+            "Sahara Desert",
+            "Thar Desert",
+            "Gobi Desert",
+            "Kalahari Desert",
+            "Arabian Desert"
+        ],
+        "correctAnswer": "Thar Desert"
+    },
+    {
+        "id": 12,
+        "question": "What are the two official languages of the Indian government?",
+        "options": [
+            "Hindi and English",
+            "Hindi and Bengali",
+            "English and Tamil",
+            "Hindi and Urdu",
+            "English and Sanskrit"
+        ],
+        "correctAnswer": "Hindi and English"
+    },
+    {
+        "id": 13,
+        "question": "Which Indian city is known as the Silicon Valley of India?",
+        "options": [
+            "Mumbai",
+            "Chennai",
+            "Hyderabad",
+            "Bangalore",
+            "Pune"
+        ],
+        "correctAnswer": "Bangalore"
+    },
+    {
+        "id": 14,
+        "question": "Which river is considered sacred by Hindus?",
+        "options": [
+            "Yamuna",
+            "Ganges",
+            "Brahmaputra",
+            "Godavari",
+            "Kaveri"
+        ],
+        "correctAnswer": "Ganges"
+    },
+    {
+        "id": 15,
+        "question": "What is the western coastal region of India called?",
+        "options": [
+            "Malabar Coast",
+            "Coromandel Coast",
+            "Konkan Coast",
+            "Western Ghats",
+            "Deccan Plateau"
+        ],
+        "correctAnswer": "Malabar Coast"
+    },
+    {
+        "id": 16,
+        "question": "Which Indian state is famous for its tea plantations?",
+        "options": [
+            "Kerala",
+            "Tamil Nadu",
+            "Assam",
+            "West Bengal",
+            "Karnataka"
+        ],
+        "correctAnswer": "Assam"
+    },
+    {
+        "id": 17,
+        "question": "What is the national animal of India?",
+        "options": [
+            "Elephant",
+            "Lion",
+            "Tiger",
+            "Leopard",
+            "Peacock"
+        ],
+        "correctAnswer": "Tiger"
+    },
+    {
+        "id": 18,
+        "question": "Which Indian city was formerly known as Bombay?",
+        "options": [
+            "Chennai",
+            "Kolkata",
+            "Mumbai",
+            "Bangalore",
+            "Hyderabad"
+        ],
+        "correctAnswer": "Mumbai"
+    },
+    {
+        "id": 19,
+        "question": "What is the southernmost point of mainland India?",
+        "options": [
+            "Cape Comorin",
+            "Kanyakumari",
+            "Point Calimere",
+            "Dhanushkodi",
+            "Rameswaram"
+        ],
+        "correctAnswer": "Kanyakumari"
+    },
+    {
+        "id": 20,
+        "question": "Which plateau covers most of southern India?",
+        "options": [
+            "Tibetan Plateau",
+            "Deccan Plateau",
+            "Malwa Plateau",
+            "Chota Nagpur Plateau",
+            "Karnataka Plateau"
+        ],
+        "correctAnswer": "Deccan Plateau"
+    }
+]

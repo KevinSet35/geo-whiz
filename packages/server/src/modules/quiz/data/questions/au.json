@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Sydney",
+            "Melbourne",
+            "Canberra",
+            "Brisbane",
+            "Perth"
+        ],
+        "correctAnswer": "Canberra"
+    },
+    {
+        "id": 2,
+        "question": "What is the largest city in Australia?",
+        "options": [
+            "Melbourne",
+            "Sydney",
+            "Brisbane",
+            "Perth",
+            "Adelaide"
+        ],
+        "correctAnswer": "Sydney"
+    },
+    {
+        "id": 3,
+        "question": "What is the currency of Australia?",
+        "options": [
+            "Australian Pound",
+            "Australian Dollar",
+            "Australian Franc",
+            "Australian Euro",
+            "Australian Peso"
+        ],
+        "correctAnswer": "Australian Dollar"
+    },
+    {
+        "id": 4,
+        "question": "Which desert covers much of central Australia?",
+        "options": [
+            "Sahara Desert",
+            "Great Victoria Desert",
+            "Outback",
+            "Gibson Desert",
+            "Great Sandy Desert"
+        ],
+        "correctAnswer": "Outback"
+    },
+    {
+        "id": 5,
+        "question": "What is the famous rock formation in central Australia?",
+        "options": [
+            "Ayers Rock (Uluru)",
+            "Devils Tower",
+            "Mount Rushmore",
+            "Stone Mountain",
+            "Gibraltar Rock"
+        ],
+        "correctAnswer": "Ayers Rock (Uluru)"
+    },
+    {
+        "id": 6,
+        "question": "Which ocean surrounds Australia?",
+        "options": [
+            "Atlantic Ocean",
+            "Pacific Ocean",
+            "Indian Ocean",
+            "Pacific and Indian Oceans",
+            "Southern Ocean"
+        ],
+        "correctAnswer": "Pacific and Indian Oceans"
+    },
+    {
+        "id": 7,
+        "question": "What is the longest river in Australia?",
+        "options": [
+            "Darling River",
+            "Murray River",
+            "Cooper Creek",
+            "Murrumbidgee River",
+            "Lachlan River"
+        ],
+        "correctAnswer": "Murray River"
+    },
+    {
+        "id": 8,
+        "question": "Which animal is native to Australia and appears on the Australian coat of arms?",
+        "options": [
+            "Koala",
+            "Kangaroo",
+            "Wombat",
+            "Tasmanian Devil",
+            "Platypus"
+        ],
+        "correctAnswer": "Kangaroo"
+    },
+    {
+        "id": 9,
+        "question": "What is the Great Barrier Reef?",
+        "options": [
+            "A mountain range",
+            "A desert",
+            "A coral reef system",
+            "A river",
+            "A forest"
+        ],
+        "correctAnswer": "A coral reef system"
+    },
+    {
+        "id": 10,
+        "question": "Which state is Melbourne located in?",
+        "options": [
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia"
+        ],
+        "correctAnswer": "Victoria"
+    },
+    {
+        "id": 11,
+        "question": "What is the name of the island state of Australia?",
+        "options": [
+            "Tasmania",
+            "Kangaroo Island",
+            "Fraser Island",
+            "Phillip Island",
+            "Norfolk Island"
+        ],
+        "correctAnswer": "Tasmania"
+    },
+    {
+        "id": 12,
+        "question": "Which Australian city is known for its Opera House?",
+        "options": [
+            "Melbourne",
+            "Brisbane",
+            "Sydney",
+            "Perth",
+            "Adelaide"
+        ],
+        "correctAnswer": "Sydney"
+    },
+    {
+        "id": 13,
+        "question": "What is the highest mountain in Australia?",
+        "options": [
+            "Mount Kosciuszko",
+            "Mount Townsend",
+            "Mount Twynam",
+            "Mount Bogong",
+            "Mount Feathertop"
+        ],
+        "correctAnswer": "Mount Kosciuszko"
+    },
+    {
+        "id": 14,
+        "question": "Which continent is Australia part of?",
+        "options": [
+            "Asia",
+            "Oceania",
+            "Antarctica",
+            "Australia",
+            "Australasia"
+        ],
+        "correctAnswer": "Oceania"
+    },
+    {
+        "id": 15,
+        "question": "What is the nickname for Australia?",
+        "options": [
+            "The Land Down Under",
+            "The Outback",
+            "The Red Continent",
+            "The Southern Land",
+            "The Island Continent"
+        ],
+        "correctAnswer": "The Land Down Under"
+    },
+    {
+        "id": 16,
+        "question": "Which Australian city hosted the 2000 Summer Olympics?",
+        "options": [
+            "Melbourne",
+            "Brisbane",
+            "Sydney",
+            "Perth",
+            "Adelaide"
+        ],
+        "correctAnswer": "Sydney"
+    },
+    {
+        "id": 17,
+        "question": "What percentage of Australia is desert or semi-arid?",
+        "options": [
+            "50%",
+            "60%",
+            "70%",
+            "80%",
+            "90%"
+        ],
+        "correctAnswer": "70%"
+    },
+    {
+        "id": 18,
+        "question": "Which bridge is a famous landmark in Sydney?",
+        "options": [
+            "Golden Gate Bridge",
+            "Sydney Harbour Bridge",
+            "Tower Bridge",
+            "Brooklyn Bridge",
+            "London Bridge"
+        ],
+        "correctAnswer": "Sydney Harbour Bridge"
+    },
+    {
+        "id": 19,
+        "question": "What is the Aboriginal name for Ayers Rock?",
+        "options": [
+            "Kata Tjuta",
+            "Uluru",
+            "Wollemi",
+            "Kakadu",
+            "Tjandrawati"
+        ],
+        "correctAnswer": "Uluru"
+    },
+    {
+        "id": 20,
+        "question": "Which strait separates Australia from Tasmania?",
+        "options": [
+            "Torres Strait",
+            "Bass Strait",
+            "Cook Strait",
+            "Dampier Strait",
+            "Clarence Strait"
+        ],
+        "correctAnswer": "Bass Strait"
+    }
+]

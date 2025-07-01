@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Toronto",
+            "Vancouver",
+            "Ottawa",
+            "Montreal",
+            "Calgary"
+        ],
+        "correctAnswer": "Ottawa"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of Canada?",
+        "options": [
+            "US Dollar",
+            "Canadian Dollar",
+            "Canadian Pound",
+            "Canadian Franc",
+            "Canadian Euro"
+        ],
+        "correctAnswer": "Canadian Dollar"
+    },
+    {
+        "id": 3,
+        "question": "How many provinces does Canada have?",
+        "options": [
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"
+        ],
+        "correctAnswer": "10"
+    },
+    {
+        "id": 4,
+        "question": "What is the longest river in Canada?",
+        "options": [
+            "St. Lawrence River",
+            "Mackenzie River",
+            "Yukon River",
+            "Fraser River",
+            "Churchill River"
+        ],
+        "correctAnswer": "Mackenzie River"
+    },
+    {
+        "id": 5,
+        "question": "Which mountain range runs through western Canada?",
+        "options": [
+            "Appalachian Mountains",
+            "Rocky Mountains",
+            "Laurentian Mountains",
+            "Coast Mountains",
+            "Mackenzie Mountains"
+        ],
+        "correctAnswer": "Rocky Mountains"
+    },
+    {
+        "id": 6,
+        "question": "What is the largest city in Canada?",
+        "options": [
+            "Ottawa",
+            "Montreal",
+            "Toronto",
+            "Vancouver",
+            "Calgary"
+        ],
+        "correctAnswer": "Toronto"
+    },
+    {
+        "id": 7,
+        "question": "Which two languages are official in Canada?",
+        "options": [
+            "English and Spanish",
+            "English and French",
+            "French and German",
+            "English and Portuguese",
+            "French and Italian"
+        ],
+        "correctAnswer": "English and French"
+    },
+    {
+        "id": 8,
+        "question": "What is the highest mountain in Canada?",
+        "options": [
+            "Mount Logan",
+            "Mount Robson",
+            "Mount Columbia",
+            "Mount Assiniboine",
+            "Mount Sir Wilfrid Laurier"
+        ],
+        "correctAnswer": "Mount Logan"
+    },
+    {
+        "id": 9,
+        "question": "Which ocean borders Canada to the west?",
+        "options": [
+            "Atlantic Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean",
+            "Indian Ocean",
+            "Southern Ocean"
+        ],
+        "correctAnswer": "Pacific Ocean"
+    },
+    {
+        "id": 10,
+        "question": "What is the famous waterfall on the border between Canada and the US?",
+        "options": [
+            "Angel Falls",
+            "Victoria Falls",
+            "Niagara Falls",
+            "Iguazu Falls",
+            "Yosemite Falls"
+        ],
+        "correctAnswer": "Niagara Falls"
+    },
+    {
+        "id": 11,
+        "question": "Which Canadian province is primarily French-speaking?",
+        "options": [
+            "Ontario",
+            "Quebec",
+            "New Brunswick",
+            "Manitoba",
+            "Nova Scotia"
+        ],
+        "correctAnswer": "Quebec"
+    },
+    {
+        "id": 12,
+        "question": "What is the national animal of Canada?",
+        "options": [
+            "Moose",
+            "Beaver",
+            "Polar Bear",
+            "Caribou",
+            "Wolf"
+        ],
+        "correctAnswer": "Beaver"
+    },
+    {
+        "id": 13,
+        "question": "Which Canadian city hosted the 2010 Winter Olympics?",
+        "options": [
+            "Toronto",
+            "Montreal",
+            "Calgary",
+            "Vancouver",
+            "Ottawa"
+        ],
+        "correctAnswer": "Vancouver"
+    },
+    {
+        "id": 14,
+        "question": "What is the largest province in Canada by area?",
+        "options": [
+            "Ontario",
+            "Quebec",
+            "British Columbia",
+            "Alberta",
+            "Saskatchewan"
+        ],
+        "correctAnswer": "Quebec"
+    },
+    {
+        "id": 15,
+        "question": "Which Great Lake is entirely within Canada?",
+        "options": [
+            "Lake Superior",
+            "Lake Huron",
+            "Lake Ontario",
+            "Lake Erie",
+            "None of them"
+        ],
+        "correctAnswer": "None of them"
+    },
+    {
+        "id": 16,
+        "question": "What is the symbol on the Canadian flag?",
+        "options": [
+            "Beaver",
+            "Moose",
+            "Maple Leaf",
+            "Eagle",
+            "Pine Tree"
+        ],
+        "correctAnswer": "Maple Leaf"
+    },
+    {
+        "id": 17,
+        "question": "Which territory is the largest in Canada?",
+        "options": [
+            "Yukon",
+            "Northwest Territories",
+            "Nunavut",
+            "British Columbia",
+            "Quebec"
+        ],
+        "correctAnswer": "Nunavut"
+    },
+    {
+        "id": 18,
+        "question": "What is the easternmost province of Canada?",
+        "options": [
+            "Nova Scotia",
+            "New Brunswick",
+            "Prince Edward Island",
+            "Newfoundland and Labrador",
+            "Quebec"
+        ],
+        "correctAnswer": "Newfoundland and Labrador"
+    },
+    {
+        "id": 19,
+        "question": "Which Canadian city is known as the cultural capital of French Canada?",
+        "options": [
+            "Quebec City",
+            "Montreal",
+            "Ottawa",
+            "Gatineau",
+            "Sherbrooke"
+        ],
+        "correctAnswer": "Montreal"
+    },
+    {
+        "id": 20,
+        "question": "What is the name of the famous Canadian police force?",
+        "options": [
+            "Canadian Police",
+            "Royal Canadian Mounted Police",
+            "Federal Police of Canada",
+            "Canadian National Police",
+            "Dominion Police"
+        ],
+        "correctAnswer": "Royal Canadian Mounted Police"
+    }
+]

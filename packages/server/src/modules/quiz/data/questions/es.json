@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "What is the capital of Spain?",
+        "options": [
+            "Barcelona",
+            "Seville",
+            "Madrid",
+            "Valencia",
+            "Bilbao"
+        ],
+        "correctAnswer": "Madrid"
+    },
+    {
+        "id": 2,
+        "question": "What is the currency of Spain?",
+        "options": [
+            "Spanish Peseta",
+            "Euro",
+            "Spanish Franc",
+            "Spanish Pound",
+            "Spanish Dollar"
+        ],
+        "correctAnswer": "Euro"
+    },
+    {
+        "id": 3,
+        "question": "Which mountain range separates Spain from France?",
+        "options": [
+            "Alps",
+            "Pyrenees",
+            "Sierra Nevada",
+            "Cantabrian Mountains",
+            "Sierra Morena"
+        ],
+        "correctAnswer": "Pyrenees"
+    },
+    {
+        "id": 4,
+        "question": "What is the longest river in Spain?",
+        "options": [
+            "Ebro",
+            "Tagus",
+            "Guadalquivir",
+            "Duero",
+            "Guadiana"
+        ],
+        "correctAnswer": "Tagus"
+    },
+    {
+        "id": 5,
+        "question": "Which Spanish city is famous for the Sagrada Familia?",
+        "options": [
+            "Madrid",
+            "Seville",
+            "Barcelona",
+            "Valencia",
+            "Granada"
+        ],
+        "correctAnswer": "Barcelona"
+    },
+    {
+        "id": 6,
+        "question": "What is the highest mountain in Spain?",
+        "options": [
+            "Pico de Aneto",
+            "Mulhacén",
+            "Teide",
+            "Torre Cerredo",
+            "Pico de la Veleta"
+        ],
+        "correctAnswer": "Teide"
+    },
+    {
+        "id": 7,
+        "question": "Which Spanish islands are located in the Atlantic Ocean?",
+        "options": [
+            "Balearic Islands",
+            "Canary Islands",
+            "Both",
+            "Neither",
+            "Only Mallorca"
+        ],
+        "correctAnswer": "Canary Islands"
+    },
+    {
+        "id": 8,
+        "question": "What is the famous palace in Granada called?",
+        "options": [
+            "Royal Palace",
+            "Alhambra",
+            "Alcázar",
+            "Escorial",
+            "Prado"
+        ],
+        "correctAnswer": "Alhambra"
+    },
+    {
+        "id": 9,
+        "question": "Which region of Spain is known for flamenco dancing?",
+        "options": [
+            "Catalonia",
+            "Basque Country",
+            "Andalusia",
+            "Galicia",
+            "Valencia"
+        ],
+        "correctAnswer": "Andalusia"
+    },
+    {
+        "id": 10,
+        "question": "What is the second largest city in Spain?",
+        "options": [
+            "Seville",
+            "Valencia",
+            "Barcelona",
+            "Bilbao",
+            "Zaragoza"
+        ],
+        "correctAnswer": "Barcelona"
+    },
+    {
+        "id": 11,
+        "question": "Which sea borders Spain to the east?",
+        "options": [
+            "Atlantic Ocean",
+            "Bay of Biscay",
+            "Mediterranean Sea",
+            "Cantabrian Sea",
+            "Alboran Sea"
+        ],
+        "correctAnswer": "Mediterranean Sea"
+    },
+    {
+        "id": 12,
+        "question": "What is the famous running of the bulls festival called?",
+        "options": [
+            "La Tomatina",
+            "San Fermín",
+            "Feria de Abril",
+            "Las Fallas",
+            "Semana Santa"
+        ],
+        "correctAnswer": "San Fermín"
+    },
+    {
+        "id": 13,
+        "question": "Which Spanish city is famous for the Guggenheim Museum?",
+        "options": [
+            "Madrid",
+            "Barcelona",
+            "Seville",
+            "Bilbao",
+            "Valencia"
+        ],
+        "correctAnswer": "Bilbao"
+    },
+    {
+        "id": 14,
+        "question": "How many autonomous communities does Spain have?",
+        "options": [
+            "15",
+            "16",
+            "17",
+            "18",
+            "19"
+        ],
+        "correctAnswer": "17"
+    },
+    {
+        "id": 15,
+        "question": "What is the traditional Spanish dish made with rice?",
+        "options": [
+            "Gazpacho",
+            "Tortilla",
+            "Paella",
+            "Jamón",
+            "Tapas"
+        ],
+        "correctAnswer": "Paella"
+    },
+    {
+        "id": 16,
+        "question": "Which Spanish territory is located in North Africa?",
+        "options": [
+            "Ceuta and Melilla",
+            "Canary Islands",
+            "Balearic Islands",
+            "Gibraltar",
+            "Andorra"
+        ],
+        "correctAnswer": "Ceuta and Melilla"
+    },
+    {
+        "id": 17,
+        "question": "What is the famous art museum in Madrid called?",
+        "options": [
+            "Louvre",
+            "Prado Museum",
+            "Guggenheim",
+            "Reina Sofía",
+            "Thyssen"
+        ],
+        "correctAnswer": "Prado Museum"
+    },
+    {
+        "id": 18,
+        "question": "Which Spanish region has its own distinct language called Euskera?",
+        "options": [
+            "Catalonia",
+            "Galicia",
+            "Basque Country",
+            "Valencia",
+            "Andalusia"
+        ],
+        "correctAnswer": "Basque Country"
+    },
+    {
+        "id": 19,
+        "question": "What is the pilgrim route that ends in Santiago de Compostela called?",
+        "options": [
+            "Via de la Plata",
+            "Camino de Santiago",
+            "Ruta del Cid",
+            "Camino Real",
+            "Via Augusta"
+        ],
+        "correctAnswer": "Camino de Santiago"
+    },
+    {
+        "id": 20,
+        "question": "Which strait separates Spain from Africa?",
+        "options": [
+            "Strait of Gibraltar",
+            "Strait of Hormuz",
+            "Bosphorus Strait",
+            "Strait of Dover",
+            "Strait of Messina"
+        ],
+        "correctAnswer": "Strait of Gibraltar"
+    }
+]
