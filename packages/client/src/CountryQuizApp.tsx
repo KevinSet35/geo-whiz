@@ -28,11 +28,9 @@ import {
     AccordionSummary,
     AccordionDetails,
     Tooltip,
-    IconButton,
     Zoom,
 } from '@mui/material';
 import {
-    Public as PublicIcon,
     Quiz as QuizIcon,
     EmojiEvents as TrophyIcon,
     Refresh as RefreshIcon,
@@ -45,8 +43,7 @@ import {
     Star as StarIcon,
     Celebration as CelebrationIcon,
 } from '@mui/icons-material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { keyframes } from '@mui/system';
+import { float, pulse, sparkle } from './App';
 
 // API Configuration
 const API_BASE_URL = 'http://localhost:5000/api';
@@ -111,137 +108,6 @@ const apiService = {
         return response.data;
     },
 };
-
-// Animations
-const float = keyframes`
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-`;
-
-const pulse = keyframes`
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-`;
-
-const sparkle = keyframes`
-  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
-  50% { opacity: 1; transform: scale(1) rotate(180deg); }
-`;
-
-// Modern Theme
-const theme = createTheme({
-    palette: {
-        mode: 'light',
-        primary: {
-            main: '#667eea',
-            light: '#9bb5ff',
-            dark: '#3f51b5',
-            contrastText: '#ffffff',
-        },
-        secondary: {
-            main: '#764ba2',
-            light: '#a478d4',
-            dark: '#4a2c72',
-            contrastText: '#ffffff',
-        },
-        success: {
-            main: '#10b981',
-            light: '#34d399',
-            dark: '#059669',
-        },
-        warning: {
-            main: '#f59e0b',
-            light: '#fbbf24',
-            dark: '#d97706',
-        },
-        error: {
-            main: '#ef4444',
-            light: '#f87171',
-            dark: '#dc2626',
-        },
-        background: {
-            default: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            paper: '#ffffff',
-        },
-        text: {
-            primary: '#1f2937',
-            secondary: '#6b7280',
-        },
-    },
-    typography: {
-        fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
-        h1: {
-            fontSize: '3.5rem',
-            fontWeight: 800,
-            background: 'linear-gradient(45deg, #667eea, #764ba2)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            textAlign: 'center',
-        },
-        h2: {
-            fontSize: '2.5rem',
-            fontWeight: 700,
-            color: '#1f2937',
-        },
-        h3: {
-            fontSize: '1.875rem',
-            fontWeight: 600,
-            color: '#374151',
-        },
-        h4: {
-            fontSize: '1.5rem',
-            fontWeight: 600,
-            color: '#374151',
-        },
-        h6: {
-            fontSize: '1.125rem',
-            fontWeight: 500,
-            color: '#6b7280',
-        },
-    },
-    shape: {
-        borderRadius: 16,
-    },
-    components: {
-        MuiCard: {
-            styleOverrides: {
-                root: {
-                    borderRadius: 20,
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                    backdropFilter: 'blur(10px)',
-                    background: 'rgba(255, 255, 255, 0.95)',
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                },
-            },
-        },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    borderRadius: 12,
-                    textTransform: 'none',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    padding: '12px 24px',
-                    boxShadow: '0 4px 14px 0 rgba(0,0,0,0.2)',
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                        transform: 'translateY(-2px)',
-                        boxShadow: '0 8px 25px 0 rgba(0,0,0,0.3)',
-                    },
-                },
-            },
-        },
-        MuiPaper: {
-            styleOverrides: {
-                root: {
-                    borderRadius: 16,
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
-                },
-            },
-        },
-    },
-});
 
 const CountryQuizApp: React.FC = () => {
     const [step, setStep] = useState<'select' | 'quiz' | 'results'>('select');
@@ -375,675 +241,556 @@ const CountryQuizApp: React.FC = () => {
     };
 
     return (
-        <ThemeProvider theme={theme}>
-            <Box
-                sx={{
-                    minHeight: '100vh',
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    '&::before': {
-                        content: '""',
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        background: 'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%)',
-                        pointerEvents: 'none',
-                    },
-                }}
-            >
-                <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: 4 }}>
-                    {/* Floating Header */}
-                    <Zoom in timeout={800}>
-                        <Box textAlign="center" mb={6}>
-                            <Box
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: 4 }}>
+            {/* Floating Header */}
+            <Zoom in timeout={800}>
+                <Box textAlign="center" mb={6}>
+                    <Box
+                        sx={{
+                            animation: `${float} 6s ease-in-out infinite`,
+                            fontSize: 100,
+                            mb: 2,
+                            filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))',
+                        }}
+                    >
+                        🌍
+                    </Box>
+                    <Typography variant="h1" sx={{
+                        mb: 2,
+                        textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                        color: 'white',
+                        background: 'none',
+                        WebkitBackgroundClip: 'unset',
+                        WebkitTextFillColor: 'white',
+                    }}>
+                        World Geography Quiz
+                    </Typography>
+                    <Typography variant="h6" sx={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic' }}>
+                        Embark on a journey to test your global knowledge
+                    </Typography>
+                    <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center', gap: 1 }}>
+                        {[...Array(5)].map((_, i) => (
+                            <StarIcon
+                                key={i}
                                 sx={{
-                                    animation: `${float} 6s ease-in-out infinite`,
-                                    fontSize: 100,
-                                    mb: 2,
-                                    filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))',
+                                    color: 'rgba(255,255,255,0.6)',
+                                    animation: `${sparkle} 2s ease-in-out infinite`,
+                                    animationDelay: `${i * 0.2}s`,
                                 }}
-                            >
-                                🌍
+                            />
+                        ))}
+                    </Box>
+                </Box>
+            </Zoom>
+
+            {/* Error Alert */}
+            {error && (
+                <Fade in>
+                    <Alert
+                        severity="error"
+                        icon={<CancelIcon />}
+                        sx={{
+                            mb: 3,
+                            borderRadius: 3,
+                            boxShadow: '0 8px 32px rgba(239, 68, 68, 0.3)',
+                        }}
+                        onClose={() => setError('')}
+                    >
+                        {error}
+                    </Alert>
+                </Fade>
+            )}
+
+            {/* Loading State */}
+            {loading && step === 'select' && (
+                <Slide direction="up" in timeout={600}>
+                    <Card elevation={10} sx={{ textAlign: 'center', p: 4, mb: 4 }}>
+                        <CircularProgress size={60} sx={{ mb: 3, color: 'primary.main' }} />
+                        <Typography variant="h6" color="text.secondary">
+                            Loading countries...
+                        </Typography>
+                    </Card>
+                </Slide>
+            )}
+
+            {/* Country Selection */}
+            {step === 'select' && !loading && countries.length > 0 && (
+                <Slide direction="up" in timeout={600}>
+                    <Card
+                        elevation={15}
+                        sx={{
+                            p: 4,
+                            mb: 4,
+                            background: 'linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))',
+                            transition: 'transform 0.3s ease',
+                            '&:hover': {
+                                transform: 'translateY(-5px)',
+                            },
+                        }}
+                    >
+                        <CardContent>
+                            <Box textAlign="center" mb={4}>
+                                <Avatar
+                                    sx={{
+                                        bgcolor: 'primary.main',
+                                        width: 80,
+                                        height: 80,
+                                        mx: 'auto',
+                                        mb: 2,
+                                        animation: `${pulse} 2s ease-in-out infinite`,
+                                    }}
+                                >
+                                    <FlagIcon sx={{ fontSize: 40 }} />
+                                </Avatar>
+                                <Typography variant="h2" gutterBottom>
+                                    Choose Your Adventure
+                                </Typography>
+                                <Typography variant="h6" color="text.secondary">
+                                    Select a country to begin your geographical journey
+                                </Typography>
                             </Box>
-                            <Typography variant="h1" sx={{
-                                mb: 2,
-                                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-                                color: 'white',
-                                background: 'none',
-                                WebkitBackgroundClip: 'unset',
-                                WebkitTextFillColor: 'white',
-                            }}>
-                                World Geography Quiz
-                            </Typography>
-                            <Typography variant="h6" sx={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic' }}>
-                                Embark on a journey to test your global knowledge
-                            </Typography>
-                            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center', gap: 1 }}>
-                                {[...Array(5)].map((_, i) => (
-                                    <StarIcon
-                                        key={i}
+
+                            <FormControl fullWidth sx={{ mb: 4 }}>
+                                <InputLabel
+                                    sx={{
+                                        fontSize: '1.1rem',
+                                        fontWeight: 500,
+                                    }}
+                                >
+                                    Country
+                                </InputLabel>
+                                <Select
+                                    value={selectedCountry}
+                                    label="Country"
+                                    onChange={(e) => handleCountrySelect(e.target.value)}
+                                    sx={{
+                                        borderRadius: 3,
+                                        '& .MuiOutlinedInput-notchedOutline': {
+                                            borderWidth: 2,
+                                        },
+                                    }}
+                                >
+                                    {countries.map((country) => (
+                                        <MenuItem key={country.code} value={country.code}>
+                                            <Box display="flex" alignItems="center" gap={2}>
+                                                <Typography sx={{ fontSize: '1.5em' }}>
+                                                    {country.flag}
+                                                </Typography>
+                                                <Typography variant="body1" fontWeight={500}>
+                                                    {country.name}
+                                                </Typography>
+                                            </Box>
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+
+                            <Box textAlign="center">
+                                <Button
+                                    variant="contained"
+                                    size="large"
+                                    onClick={startQuiz}
+                                    disabled={!selectedCountry || loading}
+                                    startIcon={loading ? <CircularProgress size={20} /> : <QuizIcon />}
+                                    sx={{
+                                        px: 4,
+                                        py: 2,
+                                        fontSize: '1.2rem',
+                                        background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                        '&:hover': {
+                                            background: 'linear-gradient(45deg, #5a67d8, #6b46c1)',
+                                        },
+                                    }}
+                                >
+                                    {loading ? 'Preparing Quiz...' : 'Start Adventure'}
+                                </Button>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </Slide>
+            )}
+
+            {/* Quiz Questions */}
+            {step === 'quiz' && questions.length > 0 && (
+                <Fade in timeout={400}>
+                    <Card elevation={15}>
+                        <CardContent sx={{ p: 4 }}>
+                            {/* Progress Section */}
+                            <Box mb={4}>
+                                <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+                                    <Typography variant="h4" color="primary">
+                                        Question {currentQuestionIndex + 1} of {questions.length}
+                                    </Typography>
+                                    <Chip
+                                        label={`${Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%`}
+                                        color="primary"
+                                        variant="filled"
                                         sx={{
-                                            color: 'rgba(255,255,255,0.6)',
-                                            animation: `${sparkle} 2s ease-in-out infinite`,
-                                            animationDelay: `${i * 0.2}s`,
+                                            fontSize: '1rem',
+                                            fontWeight: 600,
+                                            px: 2,
+                                            py: 1,
                                         }}
                                     />
-                                ))}
+                                </Box>
+                                <LinearProgress
+                                    variant="determinate"
+                                    value={(currentQuestionIndex + 1) / questions.length * 100}
+                                    sx={{
+                                        height: 12,
+                                        borderRadius: 6,
+                                        backgroundColor: 'rgba(103, 126, 234, 0.1)',
+                                        '& .MuiLinearProgress-bar': {
+                                            background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                            borderRadius: 6,
+                                        },
+                                    }}
+                                />
                             </Box>
-                        </Box>
-                    </Zoom>
 
-                    {/* Error Alert */}
-                    {error && (
-                        <Fade in>
-                            <Alert
-                                severity="error"
-                                icon={<CancelIcon />}
-                                sx={{
-                                    mb: 3,
-                                    borderRadius: 3,
-                                    boxShadow: '0 8px 32px rgba(239, 68, 68, 0.3)',
-                                }}
-                                onClose={() => setError('')}
-                            >
-                                {error}
-                            </Alert>
-                        </Fade>
-                    )}
-
-                    {/* Loading State */}
-                    {loading && step === 'select' && (
-                        <Slide direction="up" in timeout={600}>
-                            <Card elevation={10} sx={{ textAlign: 'center', p: 4, mb: 4 }}>
-                                <CircularProgress size={60} sx={{ mb: 3, color: 'primary.main' }} />
-                                <Typography variant="h6" color="text.secondary">
-                                    Loading countries...
-                                </Typography>
-                            </Card>
-                        </Slide>
-                    )}
-
-                    {/* Country Selection */}
-                    {step === 'select' && !loading && countries.length > 0 && (
-                        <Slide direction="up" in timeout={600}>
-                            <Card
-                                elevation={15}
+                            {/* Question Card */}
+                            <Paper
+                                elevation={8}
                                 sx={{
                                     p: 4,
                                     mb: 4,
-                                    background: 'linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))',
-                                    transition: 'transform 0.3s ease',
-                                    '&:hover': {
-                                        transform: 'translateY(-5px)',
-                                    },
+                                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                                    color: 'white',
+                                    textAlign: 'center',
                                 }}
                             >
-                                <CardContent>
-                                    <Box textAlign="center" mb={4}>
-                                        <Avatar
-                                            sx={{
-                                                bgcolor: 'primary.main',
-                                                width: 80,
-                                                height: 80,
-                                                mx: 'auto',
-                                                mb: 2,
-                                                animation: `${pulse} 2s ease-in-out infinite`,
-                                            }}
-                                        >
-                                            <FlagIcon sx={{ fontSize: 40 }} />
-                                        </Avatar>
-                                        <Typography variant="h2" gutterBottom>
-                                            Choose Your Adventure
-                                        </Typography>
-                                        <Typography variant="h6" color="text.secondary">
-                                            Select a country to begin your geographical journey
-                                        </Typography>
-                                    </Box>
+                                <Typography variant="h3" fontWeight={700}>
+                                    {questions[currentQuestionIndex]?.question}
+                                </Typography>
+                            </Paper>
 
-                                    <FormControl fullWidth sx={{ mb: 4 }}>
-                                        <InputLabel
+                            {/* Answer Options */}
+                            <RadioGroup
+                                value={selectedAnswer}
+                                onChange={(e) => handleAnswerSelect(Number(e.target.value))}
+                            >
+                                <Stack spacing={2}>
+                                    {questions[currentQuestionIndex]?.options.map((option, index) => (
+                                        <Paper
+                                            key={index}
+                                            elevation={selectedAnswer === index ? 8 : 2}
                                             sx={{
-                                                fontSize: '1.1rem',
-                                                fontWeight: 500,
-                                            }}
-                                        >
-                                            Country
-                                        </InputLabel>
-                                        <Select
-                                            value={selectedCountry}
-                                            label="Country"
-                                            onChange={(e) => handleCountrySelect(e.target.value)}
-                                            sx={{
+                                                p: 0,
                                                 borderRadius: 3,
-                                                '& .MuiOutlinedInput-notchedOutline': {
-                                                    borderWidth: 2,
-                                                },
-                                            }}
-                                        >
-                                            {countries.map((country) => (
-                                                <MenuItem key={country.code} value={country.code}>
-                                                    <Box display="flex" alignItems="center" gap={2}>
-                                                        <Typography sx={{ fontSize: '1.5em' }}>
-                                                            {country.flag}
-                                                        </Typography>
-                                                        <Typography variant="body1" fontWeight={500}>
-                                                            {country.name}
-                                                        </Typography>
-                                                    </Box>
-                                                </MenuItem>
-                                            ))}
-                                        </Select>
-                                    </FormControl>
-
-                                    <Box textAlign="center">
-                                        <Button
-                                            variant="contained"
-                                            size="large"
-                                            onClick={startQuiz}
-                                            disabled={!selectedCountry || loading}
-                                            startIcon={loading ? <CircularProgress size={20} /> : <QuizIcon />}
-                                            sx={{
-                                                px: 4,
-                                                py: 2,
-                                                fontSize: '1.2rem',
-                                                background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                                border: selectedAnswer === index ? 3 : 1,
+                                                borderColor: selectedAnswer === index ? 'primary.main' : 'divider',
+                                                cursor: 'pointer',
+                                                transition: 'all 0.3s ease',
+                                                transform: selectedAnswer === index ? 'scale(1.02)' : 'scale(1)',
+                                                background: selectedAnswer === index
+                                                    ? 'linear-gradient(135deg, rgba(103, 126, 234, 0.1), rgba(118, 75, 162, 0.1))'
+                                                    : 'white',
                                                 '&:hover': {
-                                                    background: 'linear-gradient(45deg, #5a67d8, #6b46c1)',
+                                                    transform: 'scale(1.01)',
+                                                    boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
                                                 },
                                             }}
+                                            onClick={() => handleAnswerSelect(index)}
                                         >
-                                            {loading ? 'Preparing Quiz...' : 'Start Adventure'}
-                                        </Button>
-                                    </Box>
-                                </CardContent>
-                            </Card>
-                        </Slide>
-                    )}
-
-                    {/* Quiz Questions */}
-                    {step === 'quiz' && questions.length > 0 && (
-                        <Fade in timeout={400}>
-                            <Card elevation={15}>
-                                <CardContent sx={{ p: 4 }}>
-                                    {/* Progress Section */}
-                                    <Box mb={4}>
-                                        <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                                            <Typography variant="h4" color="primary">
-                                                Question {currentQuestionIndex + 1} of {questions.length}
-                                            </Typography>
-                                            <Chip
-                                                label={`${Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%`}
-                                                color="primary"
-                                                variant="filled"
-                                                sx={{
-                                                    fontSize: '1rem',
-                                                    fontWeight: 600,
-                                                    px: 2,
-                                                    py: 1,
-                                                }}
+                                            <FormControlLabel
+                                                value={index}
+                                                control={<Radio sx={{ mr: 2 }} />}
+                                                label={
+                                                    <Typography variant="h6" sx={{ py: 2, fontWeight: 500 }}>
+                                                        {option}
+                                                    </Typography>
+                                                }
+                                                sx={{ width: '100%', m: 0, px: 3 }}
                                             />
-                                        </Box>
-                                        <LinearProgress
-                                            variant="determinate"
-                                            value={(currentQuestionIndex + 1) / questions.length * 100}
-                                            sx={{
-                                                height: 12,
-                                                borderRadius: 6,
-                                                backgroundColor: 'rgba(103, 126, 234, 0.1)',
-                                                '& .MuiLinearProgress-bar': {
-                                                    background: 'linear-gradient(45deg, #667eea, #764ba2)',
-                                                    borderRadius: 6,
-                                                },
-                                            }}
-                                        />
-                                    </Box>
+                                        </Paper>
+                                    ))}
+                                </Stack>
+                            </RadioGroup>
 
-                                    {/* Question Card */}
+                            {/* Next Button */}
+                            <Box mt={4} textAlign="center">
+                                <Button
+                                    variant="contained"
+                                    size="large"
+                                    onClick={handleNextQuestion}
+                                    disabled={selectedAnswer === -1 || loading}
+                                    endIcon={
+                                        loading ? (
+                                            <CircularProgress size={20} />
+                                        ) : currentQuestionIndex === questions.length - 1 ? (
+                                            <CelebrationIcon />
+                                        ) : (
+                                            <ArrowForwardIcon />
+                                        )
+                                    }
+                                    sx={{
+                                        px: 4,
+                                        py: 2,
+                                        fontSize: '1.1rem',
+                                        background: currentQuestionIndex === questions.length - 1
+                                            ? 'linear-gradient(45deg, #10b981, #059669)'
+                                            : 'linear-gradient(45deg, #667eea, #764ba2)',
+                                        '&:hover': {
+                                            background: currentQuestionIndex === questions.length - 1
+                                                ? 'linear-gradient(45deg, #059669, #047857)'
+                                                : 'linear-gradient(45deg, #5a67d8, #6b46c1)',
+                                        },
+                                    }}
+                                >
+                                    {loading
+                                        ? 'Processing...'
+                                        : currentQuestionIndex === questions.length - 1
+                                            ? 'Finish Quiz'
+                                            : 'Next Question'
+                                    }
+                                </Button>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </Fade>
+            )}
+
+            {/* Results */}
+            {step === 'results' && result && (
+                <Fade in timeout={600}>
+                    <Card elevation={15}>
+                        <CardContent sx={{ p: 4 }}>
+                            {/* Results Header */}
+                            <Box textAlign="center" mb={4}>
+                                <Box sx={{ mb: 3, animation: `${pulse} 2s ease-in-out infinite` }}>
+                                    {getScoreIcon(result.percentage)}
+                                </Box>
+                                <Typography variant="h2" gutterBottom>
+                                    Quiz Complete!
+                                </Typography>
+                                <Typography variant="h6" color="text.secondary">
+                                    You explored <strong>{selectedCountryName}</strong>
+                                </Typography>
+                            </Box>
+
+                            {/* Score Cards */}
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: { xs: 'column', md: 'row' },
+                                    gap: 3,
+                                    mb: 4
+                                }}
+                            >
+                                <Box sx={{ flex: 1 }}>
                                     <Paper
-                                        elevation={8}
+                                        elevation={6}
                                         sx={{
-                                            p: 4,
-                                            mb: 4,
+                                            p: 3,
+                                            textAlign: 'center',
                                             background: 'linear-gradient(135deg, #667eea, #764ba2)',
                                             color: 'white',
-                                            textAlign: 'center',
                                         }}
                                     >
-                                        <Typography variant="h3" fontWeight={700}>
-                                            {questions[currentQuestionIndex]?.question}
+                                        <Typography variant="h2" fontWeight={800}>
+                                            {result.score}
+                                        </Typography>
+                                        <Typography variant="body1" sx={{ opacity: 0.9 }}>
+                                            Correct Answers
                                         </Typography>
                                     </Paper>
-
-                                    {/* Answer Options */}
-                                    <RadioGroup
-                                        value={selectedAnswer}
-                                        onChange={(e) => handleAnswerSelect(Number(e.target.value))}
-                                    >
-                                        <Stack spacing={2}>
-                                            {questions[currentQuestionIndex]?.options.map((option, index) => (
-                                                <Paper
-                                                    key={index}
-                                                    elevation={selectedAnswer === index ? 8 : 2}
-                                                    sx={{
-                                                        p: 0,
-                                                        borderRadius: 3,
-                                                        border: selectedAnswer === index ? 3 : 1,
-                                                        borderColor: selectedAnswer === index ? 'primary.main' : 'divider',
-                                                        cursor: 'pointer',
-                                                        transition: 'all 0.3s ease',
-                                                        transform: selectedAnswer === index ? 'scale(1.02)' : 'scale(1)',
-                                                        background: selectedAnswer === index
-                                                            ? 'linear-gradient(135deg, rgba(103, 126, 234, 0.1), rgba(118, 75, 162, 0.1))'
-                                                            : 'white',
-                                                        '&:hover': {
-                                                            transform: 'scale(1.01)',
-                                                            boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
-                                                        },
-                                                    }}
-                                                    onClick={() => handleAnswerSelect(index)}
-                                                >
-                                                    <FormControlLabel
-                                                        value={index}
-                                                        control={<Radio sx={{ mr: 2 }} />}
-                                                        label={
-                                                            <Typography variant="h6" sx={{ py: 2, fontWeight: 500 }}>
-                                                                {option}
-                                                            </Typography>
-                                                        }
-                                                        sx={{ width: '100%', m: 0, px: 3 }}
-                                                    />
-                                                </Paper>
-                                            ))}
-                                        </Stack>
-                                    </RadioGroup>
-
-                                    {/* Next Button */}
-                                    <Box mt={4} textAlign="center">
-                                        <Button
-                                            variant="contained"
-                                            size="large"
-                                            onClick={handleNextQuestion}
-                                            disabled={selectedAnswer === -1 || loading}
-                                            endIcon={
-                                                loading ? (
-                                                    <CircularProgress size={20} />
-                                                ) : currentQuestionIndex === questions.length - 1 ? (
-                                                    <CelebrationIcon />
-                                                ) : (
-                                                    <ArrowForwardIcon />
-                                                )
-                                            }
-                                            sx={{
-                                                px: 4,
-                                                py: 2,
-                                                fontSize: '1.1rem',
-                                                background: currentQuestionIndex === questions.length - 1
-                                                    ? 'linear-gradient(45deg, #10b981, #059669)'
-                                                    : 'linear-gradient(45deg, #667eea, #764ba2)',
-                                                '&:hover': {
-                                                    background: currentQuestionIndex === questions.length - 1
-                                                        ? 'linear-gradient(45deg, #059669, #047857)'
-                                                        : 'linear-gradient(45deg, #5a67d8, #6b46c1)',
-                                                },
-                                            }}
-                                        >
-                                            {loading
-                                                ? 'Processing...'
-                                                : currentQuestionIndex === questions.length - 1
-                                                    ? 'Finish Quiz'
-                                                    : 'Next Question'
-                                            }
-                                        </Button>
-                                    </Box>
-                                </CardContent>
-                            </Card>
-                        </Fade>
-                    )}
-
-                    {/* Results */}
-                    {step === 'results' && result && (
-                        <Fade in timeout={600}>
-                            <Card elevation={15}>
-                                <CardContent sx={{ p: 4 }}>
-                                    {/* Results Header */}
-                                    <Box textAlign="center" mb={4}>
-                                        <Box sx={{ mb: 3, animation: `${pulse} 2s ease-in-out infinite` }}>
-                                            {getScoreIcon(result.percentage)}
-                                        </Box>
-                                        <Typography variant="h2" gutterBottom>
-                                            Quiz Complete!
-                                        </Typography>
-                                        <Typography variant="h6" color="text.secondary">
-                                            You explored <strong>{selectedCountryName}</strong>
-                                        </Typography>
-                                    </Box>
-
-                                    {/* Score Cards */}
-                                    <Box
+                                </Box>
+                                <Box sx={{ flex: 1 }}>
+                                    <Paper
+                                        elevation={6}
                                         sx={{
-                                            display: 'flex',
-                                            flexDirection: { xs: 'column', md: 'row' },
-                                            gap: 3,
-                                            mb: 4
+                                            p: 3,
+                                            textAlign: 'center',
+                                            background: 'linear-gradient(135deg, #764ba2, #667eea)',
+                                            color: 'white',
                                         }}
                                     >
-                                        <Box sx={{ flex: 1 }}>
-                                            <Paper
-                                                elevation={6}
-                                                sx={{
-                                                    p: 3,
-                                                    textAlign: 'center',
-                                                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
-                                                    color: 'white',
-                                                }}
-                                            >
-                                                <Typography variant="h2" fontWeight={800}>
-                                                    {result.score}
-                                                </Typography>
-                                                <Typography variant="body1" sx={{ opacity: 0.9 }}>
-                                                    Correct Answers
-                                                </Typography>
-                                            </Paper>
-                                        </Box>
-                                        <Box sx={{ flex: 1 }}>
-                                            <Paper
-                                                elevation={6}
-                                                sx={{
-                                                    p: 3,
-                                                    textAlign: 'center',
-                                                    background: 'linear-gradient(135deg, #764ba2, #667eea)',
-                                                    color: 'white',
-                                                }}
-                                            >
-                                                <Typography variant="h2" fontWeight={800}>
-                                                    {result.totalQuestions}
-                                                </Typography>
-                                                <Typography variant="body1" sx={{ opacity: 0.9 }}>
-                                                    Total Questions
-                                                </Typography>
-                                            </Paper>
-                                        </Box>
-                                        <Box sx={{ flex: 1 }}>
-                                            <Paper
-                                                elevation={6}
-                                                sx={{
-                                                    p: 3,
-                                                    textAlign: 'center',
-                                                    background: result.percentage >= 80
-                                                        ? 'linear-gradient(135deg, #10b981, #059669)'
-                                                        : result.percentage >= 60
-                                                            ? 'linear-gradient(135deg, #f59e0b, #d97706)'
-                                                            : 'linear-gradient(135deg, #ef4444, #dc2626)',
-                                                    color: 'white',
-                                                }}
-                                            >
-                                                <Typography variant="h2" fontWeight={800}>
-                                                    {result.percentage}%
-                                                </Typography>
-                                                <Typography variant="body1" sx={{ opacity: 0.9 }}>
-                                                    Final Score
-                                                </Typography>
-                                            </Paper>
-                                        </Box>
-                                    </Box>
-
-                                    {/* Score Message */}
-                                    <Alert
-                                        severity={getScoreColor(result.percentage)}
-                                        sx={{
-                                            mb: 4,
-                                            borderRadius: 3,
-                                            fontSize: '1.1rem',
-                                            fontWeight: 600,
-                                        }}
-                                        icon={<CelebrationIcon fontSize="large" />}
-                                    >
-                                        {getScoreMessage(result.percentage)}
-                                    </Alert>
-
-                                    {/* Detailed Results */}
-                                    <Box mb={4}>
-                                        <Typography variant="h4" gutterBottom sx={{ mb: 3 }}>
-                                            📊 Detailed Review
+                                        <Typography variant="h2" fontWeight={800}>
+                                            {result.totalQuestions}
                                         </Typography>
-                                        <Box sx={{ maxHeight: 400, overflow: 'auto' }}>
-                                            {result.answers.map((answer, index) => (
-                                                <Accordion key={index} elevation={2} sx={{ mb: 1 }}>
-                                                    <AccordionSummary
-                                                        expandIcon={<ExpandMoreIcon />}
-                                                        sx={{
-                                                            bgcolor: answer.isCorrect ? 'success.light' : 'error.light',
-                                                            color: 'white',
-                                                            '& .MuiAccordionSummary-content': {
-                                                                alignItems: 'center',
-                                                            },
-                                                        }}
-                                                    >
-                                                        <Box display="flex" alignItems="center" gap={2} width="100%">
-                                                            {answer.isCorrect ? (
-                                                                <CheckIcon />
-                                                            ) : (
-                                                                <CancelIcon />
-                                                            )}
-                                                            <Typography fontWeight={600}>
-                                                                Question {index + 1}
-                                                            </Typography>
-                                                            <Box flexGrow={1} />
-                                                            <Chip
-                                                                label={answer.isCorrect ? 'Correct' : 'Incorrect'}
-                                                                color={answer.isCorrect ? 'success' : 'error'}
-                                                                variant="filled"
-                                                                size="small"
-                                                            />
-                                                        </Box>
-                                                    </AccordionSummary>
-                                                    <AccordionDetails sx={{ p: 3 }}>
-                                                        <Stack spacing={2}>
-                                                            <Typography variant="h6" fontWeight={600}>
-                                                                {questions[index]?.question}
-                                                            </Typography>
-                                                            <Divider />
-                                                            <Box>
-                                                                <Typography variant="body2" color="text.secondary" gutterBottom>
-                                                                    Your Answer:
-                                                                </Typography>
-                                                                <Typography
-                                                                    variant="body1"
-                                                                    sx={{
-                                                                        p: 2,
-                                                                        bgcolor: answer.isCorrect ? 'success.light' : 'error.light',
-                                                                        color: 'white',
-                                                                        borderRadius: 2,
-                                                                        fontWeight: 500,
-                                                                    }}
-                                                                >
-                                                                    {questions[index]?.options[answer.userAnswer]}
-                                                                </Typography>
-                                                            </Box>
-                                                            {!answer.isCorrect && (
-                                                                <Box>
-                                                                    <Typography variant="body2" color="text.secondary" gutterBottom>
-                                                                        Correct Answer:
-                                                                    </Typography>
-                                                                    <Typography
-                                                                        variant="body1"
-                                                                        sx={{
-                                                                            p: 2,
-                                                                            bgcolor: 'success.light',
-                                                                            color: 'white',
-                                                                            borderRadius: 2,
-                                                                            fontWeight: 500,
-                                                                        }}
-                                                                    >
-                                                                        {questions[index]?.options[answer.correctAnswer]}
-                                                                    </Typography>
-                                                                </Box>
-                                                            )}
-                                                        </Stack>
-                                                    </AccordionDetails>
-                                                </Accordion>
-                                            ))}
-                                        </Box>
-                                    </Box>
+                                        <Typography variant="body1" sx={{ opacity: 0.9 }}>
+                                            Total Questions
+                                        </Typography>
+                                    </Paper>
+                                </Box>
+                                <Box sx={{ flex: 1 }}>
+                                    <Paper
+                                        elevation={6}
+                                        sx={{
+                                            p: 3,
+                                            textAlign: 'center',
+                                            background: result.percentage >= 80
+                                                ? 'linear-gradient(135deg, #10b981, #059669)'
+                                                : result.percentage >= 60
+                                                    ? 'linear-gradient(135deg, #f59e0b, #d97706)'
+                                                    : 'linear-gradient(135deg, #ef4444, #dc2626)',
+                                            color: 'white',
+                                        }}
+                                    >
+                                        <Typography variant="h2" fontWeight={800}>
+                                            {result.percentage}%
+                                        </Typography>
+                                        <Typography variant="body1" sx={{ opacity: 0.9 }}>
+                                            Final Score
+                                        </Typography>
+                                    </Paper>
+                                </Box>
+                            </Box>
 
-                                    {/* Action Buttons */}
-                                    <Box textAlign="center">
-                                        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
-                                            <Button
-                                                variant="contained"
-                                                size="large"
-                                                onClick={resetQuiz}
-                                                startIcon={<RefreshIcon />}
+                            {/* Score Message */}
+                            <Alert
+                                severity={getScoreColor(result.percentage)}
+                                sx={{
+                                    mb: 4,
+                                    borderRadius: 3,
+                                    fontSize: '1.1rem',
+                                    fontWeight: 600,
+                                }}
+                                icon={<CelebrationIcon fontSize="large" />}
+                            >
+                                {getScoreMessage(result.percentage)}
+                            </Alert>
+
+                            {/* Detailed Results */}
+                            <Box mb={4}>
+                                <Typography variant="h4" gutterBottom sx={{ mb: 3 }}>
+                                    📊 Detailed Review
+                                </Typography>
+                                <Box sx={{ maxHeight: 400, overflow: 'auto' }}>
+                                    {result.answers.map((answer, index) => (
+                                        <Accordion key={index} elevation={2} sx={{ mb: 1 }}>
+                                            <AccordionSummary
+                                                expandIcon={<ExpandMoreIcon />}
                                                 sx={{
-                                                    px: 4,
-                                                    py: 2,
-                                                    fontSize: '1.1rem',
-                                                    background: 'linear-gradient(45deg, #667eea, #764ba2)',
-                                                    '&:hover': {
-                                                        background: 'linear-gradient(45deg, #5a67d8, #6b46c1)',
+                                                    bgcolor: answer.isCorrect ? 'success.light' : 'error.light',
+                                                    color: 'white',
+                                                    '& .MuiAccordionSummary-content': {
+                                                        alignItems: 'center',
                                                     },
                                                 }}
                                             >
-                                                Try Another Country
-                                            </Button>
-                                            <Tooltip title="Share your results!">
-                                                <Button
-                                                    variant="outlined"
-                                                    size="large"
-                                                    startIcon={<StarIcon />}
-                                                    sx={{
-                                                        px: 4,
-                                                        py: 2,
-                                                        fontSize: '1.1rem',
-                                                        borderColor: 'primary.main',
-                                                        color: 'primary.main',
-                                                        '&:hover': {
-                                                            bgcolor: 'primary.light',
-                                                            color: 'white',
-                                                        },
-                                                    }}
-                                                    onClick={() => {
-                                                        const shareText = `I just scored ${result.percentage}% on the ${selectedCountryName} Geography Quiz! 🌍✨`;
-                                                        if (navigator.share) {
-                                                            navigator.share({ text: shareText });
-                                                        } else {
-                                                            navigator.clipboard.writeText(shareText);
-                                                        }
-                                                    }}
-                                                >
-                                                    Share Results
-                                                </Button>
-                                            </Tooltip>
-                                        </Stack>
-                                    </Box>
-                                </CardContent>
-                            </Card>
-                        </Fade>
-                    )}
-                </Container>
+                                                <Box display="flex" alignItems="center" gap={2} width="100%">
+                                                    {answer.isCorrect ? (
+                                                        <CheckIcon />
+                                                    ) : (
+                                                        <CancelIcon />
+                                                    )}
+                                                    <Typography fontWeight={600}>
+                                                        Question {index + 1}
+                                                    </Typography>
+                                                    <Box flexGrow={1} />
+                                                    <Chip
+                                                        label={answer.isCorrect ? 'Correct' : 'Incorrect'}
+                                                        color={answer.isCorrect ? 'success' : 'error'}
+                                                        variant="filled"
+                                                        size="small"
+                                                    />
+                                                </Box>
+                                            </AccordionSummary>
+                                            <AccordionDetails sx={{ p: 3 }}>
+                                                <Stack spacing={2}>
+                                                    <Typography variant="h6" fontWeight={600}>
+                                                        {questions[index]?.question}
+                                                    </Typography>
+                                                    <Divider />
+                                                    <Box>
+                                                        <Typography variant="body2" color="text.secondary" gutterBottom>
+                                                            Your Answer:
+                                                        </Typography>
+                                                        <Typography
+                                                            variant="body1"
+                                                            sx={{
+                                                                p: 2,
+                                                                bgcolor: answer.isCorrect ? 'success.light' : 'error.light',
+                                                                color: 'white',
+                                                                borderRadius: 2,
+                                                                fontWeight: 500,
+                                                            }}
+                                                        >
+                                                            {questions[index]?.options[answer.userAnswer]}
+                                                        </Typography>
+                                                    </Box>
+                                                    {!answer.isCorrect && (
+                                                        <Box>
+                                                            <Typography variant="body2" color="text.secondary" gutterBottom>
+                                                                Correct Answer:
+                                                            </Typography>
+                                                            <Typography
+                                                                variant="body1"
+                                                                sx={{
+                                                                    p: 2,
+                                                                    bgcolor: 'success.light',
+                                                                    color: 'white',
+                                                                    borderRadius: 2,
+                                                                    fontWeight: 500,
+                                                                }}
+                                                            >
+                                                                {questions[index]?.options[answer.correctAnswer]}
+                                                            </Typography>
+                                                        </Box>
+                                                    )}
+                                                </Stack>
+                                            </AccordionDetails>
+                                        </Accordion>
+                                    ))}
+                                </Box>
+                            </Box>
 
-                {/* Floating Elements */}
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        top: '10%',
-                        left: '5%',
-                        fontSize: '3rem',
-                        opacity: 0.3,
-                        animation: `${float} 8s ease-in-out infinite`,
-                        animationDelay: '0s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🗺️
-                </Box>
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        top: '20%',
-                        right: '8%',
-                        fontSize: '2.5rem',
-                        opacity: 0.3,
-                        animation: `${float} 10s ease-in-out infinite`,
-                        animationDelay: '2s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🧭
-                </Box>
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        bottom: '15%',
-                        left: '10%',
-                        fontSize: '2.8rem',
-                        opacity: 0.3,
-                        animation: `${float} 12s ease-in-out infinite`,
-                        animationDelay: '4s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🏔️
-                </Box>
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        bottom: '25%',
-                        right: '5%',
-                        fontSize: '2.6rem',
-                        opacity: 0.3,
-                        animation: `${float} 9s ease-in-out infinite`,
-                        animationDelay: '1s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🏛️
-                </Box>
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        top: '60%',
-                        left: '3%',
-                        fontSize: '2.2rem',
-                        opacity: 0.25,
-                        animation: `${float} 11s ease-in-out infinite`,
-                        animationDelay: '3s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🌎
-                </Box>
-                <Box
-                    sx={{
-                        position: 'fixed',
-                        top: '40%',
-                        right: '12%',
-                        fontSize: '2.4rem',
-                        opacity: 0.25,
-                        animation: `${float} 13s ease-in-out infinite`,
-                        animationDelay: '5s',
-                        pointerEvents: 'none',
-                        textShadow: '0 0 10px rgba(255,255,255,0.5)',
-                        filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))',
-                    }}
-                >
-                    🌍
-                </Box>
-            </Box>
-        </ThemeProvider>
+                            {/* Action Buttons */}
+                            <Box textAlign="center">
+                                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
+                                    <Button
+                                        variant="contained"
+                                        size="large"
+                                        onClick={resetQuiz}
+                                        startIcon={<RefreshIcon />}
+                                        sx={{
+                                            px: 4,
+                                            py: 2,
+                                            fontSize: '1.1rem',
+                                            background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                            '&:hover': {
+                                                background: 'linear-gradient(45deg, #5a67d8, #6b46c1)',
+                                            },
+                                        }}
+                                    >
+                                        Try Another Country
+                                    </Button>
+                                    <Tooltip title="Share your results!">
+                                        <Button
+                                            variant="outlined"
+                                            size="large"
+                                            startIcon={<StarIcon />}
+                                            sx={{
+                                                px: 4,
+                                                py: 2,
+                                                fontSize: '1.1rem',
+                                                borderColor: 'primary.main',
+                                                color: 'primary.main',
+                                                '&:hover': {
+                                                    bgcolor: 'primary.light',
+                                                    color: 'white',
+                                                },
+                                            }}
+                                            onClick={() => {
+                                                const shareText = `I just scored ${result.percentage}% on the ${selectedCountryName} Geography Quiz! 🌍✨`;
+                                                if (navigator.share) {
+                                                    navigator.share({ text: shareText });
+                                                } else {
+                                                    navigator.clipboard.writeText(shareText);
+                                                }
+                                            }}
+                                        >
+                                            Share Results
+                                        </Button>
+                                    </Tooltip>
+                                </Stack>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </Fade>
+            )}
+        </Container>
     );
 };
 
