@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base API configuration
-const api = axios.create({
+export const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api',
     timeout: 10000,
     headers: {
