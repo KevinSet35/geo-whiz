@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { PathUtil } from './utility/path.utils';
+import { PathUtil } from './common/utility/path.utils';
 import { ServeStaticMiddleware } from './serve-static-middleware';
 import { NestExpressApplication } from '@nestjs/platform-express';
 

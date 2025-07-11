@@ -1,6 +1,6 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { PathUtil } from './utility/path.utils';
+import { PathUtil } from './common/utility/path.utils';
 
 
 @Injectable()

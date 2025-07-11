@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CountriesService } from '../countries/countries.service';
 import { QuestionDto, QuizSubmissionDto, QuizResultDto } from './dto/question.dto';
-import { shuffleArray, selectRandomElements } from '../../utility/array.utils';
+import { shuffleArray, selectRandomElements } from '../../common/utility/array.utils';
 
 // Import individual country question files
 import * as usQuestions from './data/questions/us.json';
