@@ -2,16 +2,31 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { PathUtil } from './utility/path.utils';
+import { ServeStaticMiddleware } from './serve-static-middleware';
+import { NestExpressApplication } from '@nestjs/platform-express';
+
+const port = process.env['PORT'] || 5000;
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
-    
+    // const app = await NestFactory.create(AppModule);
+    const app: NestExpressApplication = await NestFactory.create<NestExpressApplication>(AppModule);
+
+    app.enableCors();
+
     app.setGlobalPrefix("api");
-    app.enableCors({
-        origin: "http://localhost:3000",
-        credentials: true, // if you're using cookies or auth headers
-    });
-    
+    // app.enableCors({
+    //     origin: "http://localhost:3000",
+    //     credentials: true, // if you're using cookies or auth headers
+    // });
+
+    // Serve the static files from the React app
+    app.useStaticAssets(PathUtil.getStaticAssetsPath());
+
+    // Apply the ServeStaticMiddleware
+    app.use(new ServeStaticMiddleware().use);
+
+
     // Global pipes
     app.useGlobalPipes(
         new ValidationPipe({
@@ -20,11 +35,11 @@ async function bootstrap() {
             forbidNonWhitelisted: true,
         }),
     );
-    
+
     // Security middleware
     //   app.use(helmet());
     //   app.use(cors());
-    
+
     // Swagger documentation
     const config = new DocumentBuilder()
         .setTitle('geo-whiz API')
@@ -34,8 +49,12 @@ async function bootstrap() {
         .build();
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('api/docs', app, document);
-    
-    await app.listen(5000);
-    console.log('Server running on port 5000');
+
+    await app.listen(port);
+    console.log(`Server running on port ${port}`);
 }
-bootstrap();
+
+bootstrap().catch(err => {
+    console.error('Error starting server:', err);
+    process.exit(1);
+});
