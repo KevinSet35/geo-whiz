@@ -38,16 +38,17 @@ import {
     Schedule as TimeIcon,
 } from '@mui/icons-material';
 import { float, pulse, sparkle } from './App';
+import api from './services/api';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:5000/api';
+// const API_BASE_URL = 'http://localhost:5000/api';
 
-const api = axios.create({
-    baseURL: API_BASE_URL,
-    headers: {
-        'Content-Type': 'application/json',
-    },
-});
+// const api = axios.create({
+//     baseURL: API_BASE_URL,
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+// });
 
 // Types matching backend DTOs
 interface LeaderboardEntry {
